@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	
+	<bean id="dakaDao" class="com.huigao.dao.impl.DakaDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="systemTipsDao" class="com.huigao.dao.impl.SystemTipsDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="workTimeDao" class="com.huigao.dao.impl.WorkTimeDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="usersDao" class="com.huigao.dao.impl.UsersDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="departmentDao" class="com.huigao.dao.impl.DepartmentDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+
+	<bean id="statisticDao" class="com.huigao.dao.impl.StatisticDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="holidayDao" class="com.huigao.dao.impl.HolidayDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="overTimeDao" class="com.huigao.dao.impl.OverTimeDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="roleDao" class="com.huigao.dao.impl.RoleDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="resourceDao" class="com.huigao.dao.impl.ResourceDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+
+	<bean id="taskDao" class="com.huigao.dao.impl.TaskDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+	
+	<bean id="projectDao" class="com.huigao.dao.impl.ProjectDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>
+
+</beans>

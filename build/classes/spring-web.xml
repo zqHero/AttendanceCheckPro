@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+	default-autowire="byType">
+
+	<!-- 导航菜单 -->
+	<bean name="/module/common/getJsonTree" class="com.huigao.struts.action.ExtTreeAction"/>
+	
+	<!-- 打卡管理 -->
+	<bean name="/module/common/getCurrentTime" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/common/daka" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/common/monthlist" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/daka/list" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/daka/save" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/daka/delete" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/daka/monthcollect" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/daka/yearcollect" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/daka/updateDakaLog" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/daka/hasStatistic" class="com.huigao.struts.action.DakaAction"/>
+	<bean name="/module/daka/statistic" class="com.huigao.struts.action.DakaAction"/>
+	
+	<!-- 系统提示管理 -->
+	<bean name="/module/common/listTips" class="com.huigao.struts.action.SystemTipsAction"/>
+	
+	<!-- 员工管理 -->
+	<bean name="/module/users/check" class="com.huigao.struts.action.UserAction"/>
+	<bean name="/module/users/save" class="com.huigao.struts.action.UserAction"/>
+	<bean name="/module/common/listUser" class="com.huigao.struts.action.UserAction"/>
+	<bean name="/module/common/changePassword" class="com.huigao.struts.action.UserAction"/>
+	<bean name="/module/users/update" class="com.huigao.struts.action.UserAction"/>
+	<bean name="/module/users/delete" class="com.huigao.struts.action.UserAction"/>
+	<bean name="/module/users/listByDepartment" class="com.huigao.struts.action.UserAction"/>
+	<bean name="/module/users/listRoles" class="com.huigao.struts.action.UserAction"/>
+	
+	<!-- 部门管理 -->
+	<bean name="/module/department/save" class="com.huigao.struts.action.DepartmentAction"/>
+	<bean name="/module/common/listDepartment" class="com.huigao.struts.action.DepartmentAction"/>
+	<bean name="/module/department/update" class="com.huigao.struts.action.DepartmentAction"/>
+	<bean name="/module/department/delete" class="com.huigao.struts.action.DepartmentAction"/>
+	<bean name="/module/department/detail" class="com.huigao.struts.action.DepartmentAction"/>
+	
+	
+	<!-- 请假管理 
+	<bean name="/module/common/listHoliday" class="com.huigao.struts.action.HolidayAction"/>
+	<bean name="/module/holidaylog/save" class="com.huigao.struts.action.HolidayAction"/>
+	<bean name="/module/holidaylog/list" class="com.huigao.struts.action.HolidayAction"/>
+	<bean name="/module/holidaylog/update" class="com.huigao.struts.action.HolidayAction"/>
+	<bean name="/module/holidaylog/delete" class="com.huigao.struts.action.HolidayAction"/>
+	-->
+	
+	<!-- 加班管理 
+	<bean name="/module/overtime/save" class="com.huigao.struts.action.OverTimeAction"/>
+	<bean name="/module/overtime/list" class="com.huigao.struts.action.OverTimeAction"/>
+	<bean name="/module/overtime/delete" class="com.huigao.struts.action.OverTimeAction"/>
+	-->
+	
+	<!-- 权限管理 -->
+	<bean name="/module/resource/list" class="com.huigao.struts.action.ResourceAction"/>
+	<bean name="/module/resource/detail" class="com.huigao.struts.action.ResourceAction"/>
+	<bean name="/module/resource/update" class="com.huigao.struts.action.ResourceAction"/>
+	<bean name="/module/resource/listRole" class="com.huigao.struts.action.ResourceAction"/>
+	
+	
+	<!-- 角色管理 -->
+	<bean name="/module/role/list" class="com.huigao.struts.action.RoleAction"/>
+	<bean name="/module/role/listUsers" class="com.huigao.struts.action.RoleAction"/>
+	<bean name="/module/role/delete" class="com.huigao.struts.action.RoleAction"/>
+	<bean name="/module/role/save" class="com.huigao.struts.action.RoleAction"/>
+	<bean name="/module/role/update" class="com.huigao.struts.action.RoleAction"/>
+	
+	<!-- 任务管理 -->
+	<bean name="/module/task/list" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/add" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/sendAudit" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/audit" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/delete" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/schedule" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/update" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/listLog" class="com.huigao.struts.action.TaskAction"/>	
+	<bean name="/module/task/listAudit" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/listSchedule" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/listMy" class="com.huigao.struts.action.TaskAction"/>
+	<bean name="/module/task/listAll" class="com.huigao.struts.action.TaskAction"/>
+	
+	<!-- 项目管理 -->
+	<bean name="/module/common/list" class="com.huigao.struts.action.ProjectAction"/>
+	<bean name="/module/project/save" class="com.huigao.struts.action.ProjectAction"/>
+	<bean name="/module/project/update" class="com.huigao.struts.action.ProjectAction"/>
+	<bean name="/module/project/delete" class="com.huigao.struts.action.ProjectAction"/>
+	
+</beans>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+	default-autowire="byType">
+
+
+	<bean id="dakaService" class="com.huigao.service.impl.DakaServiceImpl"/>
+	
+	<bean id="userService" class="com.huigao.service.impl.UserServiceImpl"/>
+	
+	<bean id="systemTipsService" class="com.huigao.service.impl.SystemTipsServiceImpl"/>
+	
+	<bean id="departmentService" class="com.huigao.service.impl.DepartmentServiceImpl"/>
+	
+	<bean id="roleService" class="com.huigao.service.impl.RoleServiceImpl"/>
+	
+	<bean id="resourceService" class="com.huigao.service.impl.ResourceServiceImpl"/>
+
+	<bean id="statisticService" class="com.huigao.service.impl.StatisticServiceImpl"/>
+	
+	<bean id="holidayService" class="com.huigao.service.impl.HolidayServiceImpl"/>
+	
+	<bean id="overTimeService" class="com.huigao.service.impl.OverTimeServiceImpl"/>
+	
+	<bean id="taskService" class="com.huigao.service.impl.TaskServiceImpl"></bean>
+	
+	<bean id="projectService" class="com.huigao.service.impl.ProjectServiceImpl"></bean>
+	
+
+</beans>

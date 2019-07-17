@@ -1,0 +1,906 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WeTogether员工考勤管理及任务管理系统1.0用户手册</title>
+<link rel="stylesheet" type="text/css"  href="css/right.css">
+<style type="text/css">
+<!--
+div.MsoNormal {mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:normal;
+	mso-pagination:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+li.MsoNormal {mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:normal;
+	mso-pagination:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+p.MsoNormal {mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:normal;
+	mso-pagination:none;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:宋体;
+	mso-font-kerning:1.0pt;}
+-->
+</style>
+</head>
+
+<body>
+<div class="page">
+<a name="1"><h1 class=first>1       用户手册申明</h1></a>
+<a name="1.1"><h1 class=first>1.1   著作权&amp;约束</h1></a>
+<div class="pageContent" >
+
+本手册之版权归汇高网讯科技（北京）有限公司（以下简称汇高网讯）所有，任何复制和使用都必须得到汇高网讯的书面认可。汇高网讯保留在不通知的情况下修改本手册的权力。
+
+WeTogether员工考勤管理及任务管理系统1.0软件的版权归汇高网讯科技（北京）有限公司所有，任何商业使用、企业内部经营中使用都必须得到汇高网讯的软件授权许可。
+
+
+</div>
+<a name="1.2"><h1 class=first>1.2   保证和约定义务</h1></a>
+<div class="pageContent" style="height:80px;">
+汇高网讯将为合法用户负责本手册的解释权，对任何非法用户，汇高网讯将不承担任何法律责任。
+</div>
+
+
+<a name="2"><h1 class=first>2       前言</h1></a>
+<a name="2.1"><h1 class=first>2.1   编写目的</h1></a>
+<div class="pageContent">
+<pre>
+本文档是《WeTogether员工考勤管理及任务管理系统1.0用户手册》。
+
+目的：主要说明用户如何使用该手册、如何操作WeTogether员工考勤管理及任务管理系统1.0以及相关的注意事项。
+
+</pre>
+</div>
+<a name="2.2"><h1 class=first>2.2   缩写词和术语</h1></a>
+<div class="pageContent">
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .5pt solid windowtext;mso-border-insidev:.5pt solid windowtext; margin-left:200px;'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=121 valign=top style='width:90.45pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  lang=EN-US style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>WeTogether<o:p></o:p></span></p>
+  </td>
+  <td width=448 valign=top style='width:335.65pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  lang=EN-US style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>WeTogether</span><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>员工考勤管理及任务管理系统<span
+  lang=EN-US>1.0</span>的注册商标<span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=121 valign=top style='width:90.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  lang=EN-US style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>IE<o:p></o:p></span></p>
+  </td>
+  <td width=448 valign=top style='width:335.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>中文浏览器<span
+  lang=EN-US>, Internet Explorer <o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=121 valign=top style='width:90.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  lang=EN-US style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>J2EE <o:p></o:p></span></p>
+  </td>
+  <td width=448 valign=top style='width:335.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  lang=EN-US style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>Java
+  2 Enterprise Edition </span><span style='font-size:10.5pt;font-family:宋体;
+  mso-font-kerning:0pt'>，基于<span lang=EN-US>Java2</span>平台的企业级应用开发体系<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=121 valign=top style='width:90.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>双击<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=448 valign=top style='width:335.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>就是双击鼠标，连续快速的按两下<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=121 valign=top style='width:90.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>单击<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=448 valign=top style='width:335.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>就是单击鼠标，按一下鼠标键<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td width=121 valign=top style='width:90.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>选中<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td width=448 valign=top style='width:335.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>将定位标志指向该记录，即将光标指向当前记录，被选记录为高亮显示。<span
+  lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+ </tr>
+</table></div>
+
+<a name="3"><h1 class=first>3       系统概述</h1></a>
+<a name="3.1"><h1 class=first>3.1   系统软硬件环境要求</h1></a>
+<div class="pageContent">
+<pre>
+1、硬件环境
+
+    机型要求：PC、PC Server、服务器
+
+    最小内存：256MB
+
+    最小硬盘空间：1GB
+
+2、软件环境
+
+    操作系统：支持Windows 2K/XP，Linux、Solaris等Unix系统
+
+    数据库：支持MySQL、SQL Server、Oracle、informix等数据库
+
+    JAVA JDK：1.5及以上版本
+
+    Web Server：支持Tomcat5.0、Weblogic、Websphere等
+
+
+</pre>
+</div>
+
+<a name="3.2"><h1 class=first>3.2   系统技术特点</h1></a>
+<div class="pageContent">
+　　<br />
+　　
+1、灵活的客户自定义<br />
+　　
+用户可以根据各自的特色和不同需求定制组织机构、皮肤、访问权限等，保障用户的工作更加方便快捷。<br />
+　　
+2、跨平台支持<br />
+　　
+采用纯JAVA技术开发，JAVA技术与操作系统无关的特性使得系统具有极好的跨平台移植性，真正实现了一次开发随处应用；基于N层软件体系结构，使系统具有极大的伸缩性。<br />
+　　
+3、功能模块化体系结构<br />
+　　
+系统各功能模块彼此有接口又相互独立，可拆分、可选、可支持将来各模块功能的单独扩展和定制。还可根据用户的要求对各模块进行二次开发，适应不同用户的特殊需求。<br />
+　　
+4、严密安全控制<br />
+　　
+系统支持多重级别、多个层次的权限定义，通过授权实现分级管理。另外还采取数据加密、用户操作日志报告等安全措施，并结合操作系统、数据库的安全管理，保证系统数据的机密性及完整性，保障各项业务的正常运转。<br />
+　　
+5、高效率、易使用<br />
+　　
+系统基于B/S结构，对硬件降低要求，用户端不需安装任何软件，只需通过浏览器即可访问，为中小企业提供了较高的性价比。系统在操作上保持了功能明确、提示清晰、流程清楚的风格，让用户的使用更加方便快捷，让系统推广实施更加迅速。<br />
+　　</div>
+
+<a name="3.3"><h1 class=first>3.3   系统技术架构</h1></a>
+<div class="pageContent">
+
+<pre>
+WeTogether员工考勤管理及任务管理系统1.0采用的是J2EE技术架构，控制层使用的是Struts，数据库访问用的是Hibernate，
+整个系统由Spring统一管理，安全控制由Spring Security控制，表现层使用的是Ext js，系统架构如下：</pre>
+<img width=553 height=408
+src="WeTogetherRight.files/image010.jpg" v:shapes="_x0000_i1030">
+<div class=clear style="clear:both"></div>
+</div>
+<a name="3.4"><h1 class=first>3.4   系统主要功能列表</h1></a>
+<div class="pageContent">
+<pre>
+该系统主要用于企事业单位在局域网上或者互联网上进行考勤打卡管理、任务管理、项目管理等网络化、无纸化协同办公。
+
+目前版本的主要功能如下：
+</pre>
+
+<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0"
+ style='border-collapse:collapse;border:none;mso-border-alt:solid navy .75pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;mso-border-insideh:
+ .75pt solid navy;mso-border-insidev:.75pt solid navy; margin-left:200px;'>
+  <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+    <td width="140" valign="top" style='width:105.2pt;border:solid navy 1.0pt;
+  mso-border-alt:solid navy .75pt;background:navy;mso-shading:white;mso-pattern:
+  solid navy;padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="center" style='text-align:center'><b><span
+  style='font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+  &quot;Times New Roman&quot;;color:white'>功能类别</span><span style='color:white' lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></b></p></td>
+    <td width="147" valign="top" style='width:110.6pt;border:solid navy 1.0pt;
+  border-left:none;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  background:navy;mso-shading:white;mso-pattern:solid navy;padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><b><span
+  style='font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+  &quot;Times New Roman&quot;;color:white'>功能点</span><span style='color:white' lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></b></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border:solid navy 1.0pt;
+  border-left:none;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  background:navy;mso-shading:white;mso-pattern:solid navy;padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="center" style='text-align:center'><b><span
+  style='font-family:宋体;mso-ascii-font-family:&quot;Times New Roman&quot;;mso-hansi-font-family:
+  &quot;Times New Roman&quot;;color:white'>功能描述</span><span style='color:white' lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></b></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:1'>
+    <td width="140" valign="top" style='width:105.2pt;border:solid navy 1.0pt;
+  border-top:none;mso-border-top-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>系统初始化配置<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>系统初始化配置<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>进行系统参数的初始化<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:2'>
+    <td width="140" valign="top" style='width:105.2pt;border:solid navy 1.0pt;
+  border-top:none;mso-border-top-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>系统登录<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>系统登录<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>输入用户名、口令进行系统登录<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:3'>
+    <td width="140" rowspan="5" valign="top" style='width:105.2pt;border:solid navy 1.0pt;
+  border-top:none;mso-border-top-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>系统管理<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>员工管理<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>员工的增删改、按部门查询等<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:4'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>部门管理<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>部门的增删改及部门员工列表的显示<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:5'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>权限管理<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>把功能点权限赋给角色<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:6'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>角色管理<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>角色的增加删除，并为角色增加删除用户<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:7'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>项目管理<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>项目信息的增删改<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:8'>
+    <td width="140" rowspan="5" valign="top" style='width:105.2pt;border:solid navy 1.0pt;
+  border-top:none;mso-border-top-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>打卡管理<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>个人打卡<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>个人上下班打卡<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:9'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal"><span style='font-size:10.5pt;font-family:宋体;mso-font-kerning:
+  0pt'>个人打卡月度明细<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>查询当前月及一起月份个人的打卡记录<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:10'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>月度汇总<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>按所有人、各部门汇总统计员工的月度考勤情况<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:11'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>年度汇总<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>按所有人、各部门汇总统计员工的月度考勤情况<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:12'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>打卡记录调整<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>有权限者可以对打卡时间、事由等进行调整<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:13'>
+    <td width="140" rowspan="5" valign="top" style='width:105.2pt;border:solid navy 1.0pt;
+  border-top:none;mso-border-top-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>任务管理<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>管理任务<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>任务的增删改查；<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:14'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>调度任务<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>调度任务给别的员工<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:15'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>审核任务<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>对于已经完成提交的任务进行审核<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:16'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>提交管理<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>将任务提交，等待审核<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:17'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>任务流程记录<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>显示任务的操作流程，包括操作人，操作时间，操作动作，接收者等<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:18'>
+    <td width="140" rowspan="3" valign="top" style='width:105.2pt;border:solid navy 1.0pt;
+  border-top:none;mso-border-top-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>辅助功能<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>密码修改<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>修改登录密码<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:19'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>换肤功能<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>替换当前的界面风格<span lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+  <tr style='mso-yfti-irow:20;mso-yfti-lastrow:yes'>
+    <td width="147" valign="top" style='width:110.6pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" style='text-indent:21.0pt;mso-char-indent-count:2.0'><span
+  style='font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt'>列表排序和定制<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+    <td width="277" valign="top" style='width:207.8pt;border-top:none;border-left:
+  none;border-bottom:solid navy 1.0pt;border-right:solid navy 1.0pt;mso-border-top-alt:
+  solid navy .75pt;mso-border-left-alt:solid navy .75pt;mso-border-alt:solid navy .75pt;
+  padding:0cm 5.4pt 0cm 5.4pt'><p class="MsoNormal" align="left" style='text-align:left'><span style='font-size:
+  10.5pt;font-family:宋体;mso-font-kerning:0pt'>列表的表头，可以指定某列进行正序、逆序排序，还可以定制哪些列显示，哪些列不显示<span
+  lang="EN-US" xml:lang="EN-US">
+      <o:p></o:p>
+    </span></span></p></td>
+  </tr>
+</table>
+</div>
+<a name="4"><h1 class=first>4       系统初始化配置</h1></a>
+<div class="pageContent">
+<pre>
+第一次部署系统代码时，系统会提示进行如下图所示的系统初始化配置，
+请填写或检验数据库主机、数据库端口号、数据库名称、数据库用户、数据库密码、域名、部署路径、端口号等配置项。</pre>
+<span style="font-size:10.5pt;
+font-family:宋体;mso-font-kerning:0pt"><a  href="WeTogetherRight.files/image011.png" target="_blank"><img width="553" height="328"
+src="WeTogetherRight.files/image012.jpg" v:shapes="_x0000_i1031" /></a></span></div>
+
+
+<a name="5"><h1 class=first>5       系统登录</h1></a>
+<div class="pageContent">
+<pre>在浏览器地址栏输入形如<a href="http://192.168.1.188:8088/xietong" target="_blank" style="color:#ff0000;">http://192.168.1.188:8088/xietong</a>的地址（具体地址要问系统管理员），然后输入用户名、口令，就可以完成系统的登录。
+
+系统登录页面入下图所示。
+</pre>
+<a href="WeTogetherRight.files/image013.png" target="_blank"><img border="0" width="369" height="276"
+src="WeTogetherRight.files/image014.jpg" v:shapes="_x0000_i1032" /></a></div>
+
+<a name="6"><h1 class=first>6       系统管理</h1></a>
+<a name="6.1">
+<h1 class=first>6.1   员工管理</h1>
+</a>
+<div class="pageContent">
+<pre>
+员工管理主要是针对本系统的实际使用用户进行管理，包括对个人基本信息的管理，为员工指定部门，
+指定上级领导。其中为了保证用户登录的安全性，对员工的登录密码采用MD5加密。如下图：</pre>
+<a href="WeTogetherRight.files/image015.png" target="_blank"><img border="0" width="553" height="251"
+src="WeTogetherRight.files/image016.jpg" v:shapes="_x0000_i1033" /></a></div>
+
+
+<a name="6.1.1"><h1 class=first>6.1.1  添加员工</h1></a>
+<div class="pageContent">
+　　<br />
+　　
+点击“添加员工”按钮，系统会弹出添加员工的一个窗口，在这里可以输入用户的用户名、密码、真实姓名、性别、出生日期、学校、专业、部门、上级姓名等。对表单的各项输入都有验证，比如用户名不能重复、密码长度要求等。如下图：<BR />
+<a href="WeTogetherRight.files/image017.png" target="_blank"><img border="0" width="553" height="251"
+src="WeTogetherRight.files/image018.jpg" v:shapes="_x0000_i1034" /></a></div>
+
+<a name="6.1.2"><h1 class=first>6.1.2  修改员工信息</h1></a>
+<div class="pageContent">
+　　<br />
+　　
+单击某个单元格，该单元格信息会自动变成可修改状态，在满足验证条件的前提下可以任意修改，修改之后要点击上面的“保存修改”按钮，才会将修改的信息与数据库中的信息进行同步。<BR />
+<a href="WeTogetherRight.files/image019.png" target="_blank"><img border="0" width="554" height="251"
+src="WeTogetherRight.files/image020.jpg" v:shapes="_x0000_i1035" /></a></div>
+
+<a name="6.1.3"><h1 class=first>6.1.3  按部门查询</h1></a>
+<div class="pageContent">
+<pre>
+系统还提供了按部门查询员工的功能，可以更方便的让管理人员对员工进行相应操作。
+</pre>
+<a href="WeTogetherRight.files/image015.png" target="_blank"><img border="0" width="553" height="251"
+src="WeTogetherRight.files/image022.jpg" v:shapes="_x0000_i1036" /></a></div>
+<a name="6.1.4">
+<h1 class=first>6.1.4  删除员工</h1>
+</a>
+<div class="pageContent">
+<pre>
+选中某个员工，或者按住Shift或Ctrl批量选中，然后点击上面的删除按钮，系统会进
+行删除确认。点击确定后会将选中的员工删除，相应的员工打卡信息也被级联删除掉。
+</pre>
+<a href="WeTogetherRight.files/image023.png" target="_blank"><img border="0" width="553" height="251"
+src="WeTogetherRight.files/image024.jpg" v:shapes="_x0000_i1037" /></a></div>
+
+<a name="6.2"><h1 class=first>6.2   部门管理</h1></a>
+<div class="pageContent">
+　　<br />
+　　
+部门管理主要提供对部门信息的增删改，以及查看属于该部门的员工情况的功能。在打开该页面的时候默认只能看到部门的名称，展开之后可以看到部门的详细情况描述。<br />
+<a href="WeTogetherRight.files/image025.png" target="_blank"><img border="0" width="553" height="250"
+src="WeTogetherRight.files/image026.jpg" v:shapes="_x0000_i1038" /></a></div>
+
+<a name="6.3"><h1 class=first>6.3   权限管理</h1></a>
+<div class="pageContent">
+　　<br />
+　　
+角色和权限可以说是每个管理系统必不可少的基本功能。本系统采用的权限管理是在springsecurity的模型基础上的通过URL拦截来实现的。其中，每个员工可以具备不同的角色，每个角色具备各种不同的功能，<br />
+　　
+权限管理就是列出系统提供的各种各样的功能点，以及要进行该功能操作需要具备的角色。如下图，左侧列出的是本系统的基本功能项，点击某一项后右侧列表中的角色选中的即为要访问该功能需要具备的角色。同时可以增加选中或取消选中，然后点击右下角的“保存修改”按钮来修改权限对应的角色。<br />
+<a href="WeTogetherRight.files/image027.png" target="_blank"><img border="0" width="553" height="251"
+src="WeTogetherRight.files/image028.jpg" v:shapes="_x0000_i1039" /></a></div>
+
+<a name="6.4"><h1 class=first>6.4   角色管理</h1></a>
+<div class="pageContent">
+　　<br />
+　　
+角色管理主要是对角色的增删改操作。点击某个角色，会在右侧的列表中列出具备该角色的用户，我们可以添加一个已存在的用户或者删除某个用户来实现角色的管理操作。<BR />
+<a href="WeTogetherRight.files/image029.png" target="_blank"><img border="0" width="553" height="251"
+src="WeTogetherRight.files/image030.jpg" v:shapes="_x0000_i1040" /></a></div>
+
+<a name="6.5"><h1 class=first>6.5   项目管理</h1></a>
+<div class="pageContent">
+　项目管理主要提供对项目信息的增删改，项目信息主要用于任务管理功能来指定任务所属的项目。<br />
+
+<span style="font-size:10.5pt;font-family:宋体;mso-font-kerning:0pt"><a href="WeTogetherRight.files/image031.png" target="_blank"><img border="0" width="553" height="251"
+src="WeTogetherRight.files/image032.jpg" v:shapes="_x0000_i1041" /></a></span></div>
+
+<a name="7"><h1 class=first>7       打卡管理</h1></a>
+<div class="pageContent">
+　用户可通过此模块完成日常打卡考勤，主要有个人打卡、个人打卡月度明细、打卡月度统计、打卡年度统计、打卡调整。其中打卡人工调整部分包括请假管理、特殊情况调整等。<br />
+</div>
+
+<a name="7.1"><h1 class=first>7.1   个人打卡</h1></a>
+<div class="pageContent">
+　登陆系统后，在系统的主页有打卡按钮，点击打卡按钮会出现相应打卡提示，是正常上下班，还是迟到或者早退。
+<br />
+
+<a href="WeTogetherRight.files/image033.png" target="_blank"><img border="0" width="553" height="250"
+src="WeTogetherRight.files/image034.jpg" v:shapes="_x0000_i1042" /></a><br />
+<a href="WeTogetherRight.files/image035.png" target="_blank"><img border="0" width="553" height="250"
+src="WeTogetherRight.files/image036.jpg" v:shapes="_x0000_i1043" /></a></div>
+
+
+<a name="7.2"><h1 class=first>7.2   个人打卡月度明细</h1></a>
+<div class="pageContent">
+　　点击导航菜单中的个人打卡月度明细,系统会列出当前登录用户的当月打卡详细记录，包括上下班时间、请假时间等，如下图：
+
+<br />
+
+<a href="WeTogetherRight.files/image037.png" target="_blank"><img border="0" width="553" height="250"
+src="WeTogetherRight.files/image038.jpg" v:shapes="_x0000_i1044" /></a><br />
+选择不同的月份，点击查询按钮会相应的查询该月份的详细打卡记录。</div>
+
+<a name="7.3"><h1 class=first>7.3   月度汇总</h1></a>
+<div class="pageContent">
+　月度汇总是将所有员工某个月的打卡信息统计之后呈现的结果，主要包括个人的工作时间、加班时间、事假时间、病假时间、休假时间，以及迟到早退次数，点击某个人的月度统计还可以查看该员工的月度详细打卡记录。页面如下：<br />
+
+<a href="WeTogetherRight.files/image039.png" target="_blank"><img border="0" width="553" height="280"
+src="WeTogetherRight.files/image040.jpg" v:shapes="_x0000_i1045" /></a><br />
+另外月度统计还提供按部门查询，按月度查询，重新统计等功能。</div>
+
+<a name="7.4"><h1 class=first>7.4   年度汇总</h1></a>
+<div class="pageContent">
+　　功能与月度统计功能类似，统计员工一年的打卡信息。<br />
+
+<a href="WeTogetherRight.files/image041.png" target="_blank"><img border="0" width="553" height="280"
+src="WeTogetherRight.files/image042.jpg" v:shapes="_x0000_i1046" /></a></div>
+
+<a name="7.5"><h1 class=first>7.5   打卡记录调整</h1></a>
+<div class="pageContent">
+　　管理人员可以根据实际情况对员工的打卡记录进行调整，譬如有请假、事假、病假、休假等没有打卡记录或者缺少打卡记录时，由管理人员进行补充打卡或调整打卡。
+<br />如下图：
+
+<br />
+
+<a href="WeTogetherRight.files/image043.png" target="_blank"><img border="0" width="553" height="250"
+src="WeTogetherRight.files/image044.jpg" v:shapes="_x0000_i1047" /></a>
+<br />
+另外调整的时候还可以按部门查询或按员工用户名查询等，如下图：
+<br />
+<a href="WeTogetherRight.files/image045.png" target="_blank"><img border="0" width="553" height="250"
+src="WeTogetherRight.files/image046.jpg" v:shapes="_x0000_i1048" /></a></div>
+
+<a name="8"><h1 class=first>8       任务管理</h1></a>
+<div class="pageContent">
+　　任务管理主要分为管理任务（增删改查）、调度任务、审核任务、提交任务。任务状态有待完成、待审核、已完成三种，任务状态随着任务所处的阶段自动发生改变，新产生的任务状态为待完成，任务有负责人完成，提交给上级审核后，状态变为待审核，审核通过后状态变为已完成，否则为待完成。<br />
+</div>
+
+<a name="8.1"><h1 class=first>8.1   管理任务</h1></a>
+<div class="pageContent">
+管理任务界面如下图所示
+<br />
+
+<span style="mso-no-proof:yes">
+<a href="WeTogetherRight.files/image047.png" target="_blank"><img border="0" width="554" height="217"
+src="WeTogetherRight.files/image048.jpg" v:shapes="图片_x0020_4" /></a></span>
+<BR />
+点击“新增”按钮，弹出图6.2所示对话框，输入任务详细信息，单击“添加”按钮，将新增加的任务保存到数据库中。
+
+<span style="mso-no-proof:yes">
+<a href="WeTogetherRight.files/image049.png" target="_blank"><img border="0" width="551" height="254"
+src="WeTogetherRight.files/image050.jpg" v:shapes="图片_x0020_7" /></a></span>
+<BR />
+修改任务的名称、所属项目、任务类型、优先级可以直接点击要修改的数据，该数据变为可编辑状态，修改完后点击菜单栏中的“保存”，可将所做修改保存到数据库中。
+
+要修改任务的详细描述，首先选中要修改的任务，再点击菜单栏中的“修改描述”，可弹出修改任务信息对话框，如图6.3所示。<BR />
+<span style="mso-bidi-font-size:
+10.5pt;mso-no-proof:yes">
+<a href="WeTogetherRight.files/image051.png" target="_blank"><img border="0" width="554" height="254"
+src="WeTogetherRight.files/image052.jpg" v:shapes="图片_x0020_8" /></a></span></div>
+
+<a name="8.2"><h1 class=first>8.2   调度任务</h1></a>
+<div class="pageContent">
+　调度任务是将已分配出去的任务重指定负责人，双击要修改的负责人，该列变为下拉列表，选择要指定的负责人，调度好后，点击“保存修改”，可将所做修改保存到数据库中。如图6.4所示。<br />
+
+<span style="mso-no-proof:yes">
+<a href="WeTogetherRight.files/image053.png" target="_blank"><img border="0" width="553" height="255"
+src="WeTogetherRight.files/image054.jpg" v:shapes="图片_x0020_5" /></a></span></div>
+<a name="8.3"><h1 class=first>8.3 提交任务</h1></a>
+<div class="pageContent">
+　　可以点击“自己待完成的任务”查询出自己待完成的任务，任务完成后选中点击“送去审核”，改任务状态由“待完成”变为“待审核”，送给相关人员审核，审核通过后任务状态变为“已完成”，审核不通过，会重新发回来，状态为“待完成”。如图所示。
+<br />
+
+<span style="mso-no-proof:yes"><a href="WeTogetherRight.files/image055.png" target="_blank"><img border="0" width="552" height="256"
+src="WeTogetherRight.files/image056.jpg" v:shapes="图片_x0020_6" /></a></span></div>
+<a name="8.4"><h1 class=first>8.4   审核任务</h1></a>
+<div class="pageContent">
+　具有审核权限的人可以对提交的任务进行审核，双击任务状态，任务状态变为下拉列表，列表中有“审核通过”和“审核不通过”，审核完成后点击“保存修改”，如图所示。<br />
+
+<span style="mso-bidi-font-size:10.5pt;mso-no-proof:yes"><a href="WeTogetherRight.files/image057.png" target="_blank"><img border="0" width="552" height="253"
+src="WeTogetherRight.files/image058.jpg" v:shapes="图片_x0020_21" /></a></span></div>
+<a name="8.5"><h1 class=first>8.5 任务流程记录</h1></a>
+<div class="pageContent">
+　　选中每条任务，在任务列表的流程记录窗口中，显示任务的处理流程，包括操作人，操作时间，操作动作，接收者等信息。</div>
+<a name="9"><h1 class=first>9       辅助功能</h1></a>
+<a name="9.1">
+<h1 class=first>9.1   密码修改功能</h1>
+</a>
+<div class="pageContent">
+　在导航树的下面有一个“修改密码”按钮，点击后会弹出修改密码的窗口，提示用户输入新的密码，点击确定保存修改。
+<br />
+
+<a href="WeTogetherRight.files/image059.png" target="_blank"><img border="0" width="553" height="267"
+src="WeTogetherRight.files/image060.jpg" v:shapes="_x0000_i1055" /></a></div>
+<a name="9.2"><h1 class=first>9.2   换肤功能 </h1></a>
+<div class="pageContent">
+在导航树的上面有一个下拉列表，修改下拉列表的选中值，系统会自动替换当前的皮肤。<br />
+
+<a href="WeTogetherRight.files/image061.png" target="_blank"><img border="0" width="554" height="264"
+src="WeTogetherRight.files/image062.jpg" v:shapes="_x0000_i1056" /></a></div>
+<a name="9.3"><h1 class=first>9.3   列表排序和定制功能 </h1></a>
+<div class="pageContent">
+列表的表头，可以指定某列进行正序、逆序排序，还可以定制哪些列显示，哪些列不显示。
+
+<br />
+
+<a href="WeTogetherRight.files/image063.png" target="_blank"><img border="0" width="553" height="266"
+src="WeTogetherRight.files/image064.jpg" v:shapes="_x0000_i1057" /></a></div>
+
+</div>
+</body>
+</html>

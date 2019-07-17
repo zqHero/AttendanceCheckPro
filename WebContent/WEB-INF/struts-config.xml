@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans />
+  <global-exceptions />
+  <global-forwards>
+  	<forward name="login" path="/index.jsp"></forward>
+  	<forward name="main" path="/main.jsp"></forward>
+  </global-forwards>
+  
+  <action-mappings>
+  
+    <!-- 导航菜单 -->
+  	<action path="/module/common/getJsonTree" parameter="getJsonTree"/>
+    
+  	<!-- 打卡管理 -->
+  	<action path="/module/common/getCurrentTime" parameter="getCurrentTime"/>
+  	<action path="/module/common/daka" parameter="daka"/>
+  	<action path="/module/common/monthlist" parameter="monthlist"/>
+  	<action path="/module/daka/list" parameter="list"/>
+  	<action path="/module/daka/save" parameter="save"/>
+  	<action path="/module/daka/delete" parameter="delete"/>
+  	<action path="/module/daka/monthcollect" parameter="monthcollect"/>
+  	<action path="/module/daka/yearcollect" parameter="yearcollect"/>
+  	<action path="/module/daka/updateDakaLog" parameter="updateDakaLog"/>
+  	<action path="/module/daka/hasStatistic" parameter="hasStatistic"/>
+  	<action path="/module/daka/statistic" parameter="statistic"/>
+  	
+  	<!-- 系统提示管理 -->
+  	<action path="/module/common/listTips" parameter="listTips"/>
+  	
+  	<!-- 员工管理 -->
+  	<action path="/module/users/check" parameter="checkUser"/>
+  	<action path="/module/users/save" parameter="save"/>
+  	<action path="/module/common/listUser" parameter="list"/>
+  	<action path="/module/common/changePassword" parameter="changePassword"/>
+  	<action path="/module/users/update" parameter="update"/>
+  	<action path="/module/users/delete" parameter="delete"/>
+  	<action path="/module/users/listByDepartment" parameter="listByDepartment"/>
+  	<action path="/module/users/listRoles" parameter="listRoles"/>
+  	<action path="/module/users/updateRoles" parameter="listRoles"/>
+  	
+  	<!-- 部门管理 -->
+  	<action path="/module/department/save" parameter="save"/>
+  	<action path="/module/common/listDepartment" parameter="list"/>
+  	<action path="/module/department/update" parameter="update"/>
+  	<action path="/module/department/delete" parameter="delete"/>
+  	<action path="/module/department/detail" parameter="detail"/>
+  	
+  	<!-- 权限管理 -->
+  	<action path="/module/resource/list" parameter="list"/>
+  	<action path="/module/resource/update" parameter="update"/>
+  	<action path="/module/resource/listRole" parameter="listRole"/>
+  	
+  	<!-- 角色管理 -->
+  	<action path="/module/role/list" parameter="list"/>
+  	<action path="/module/role/listUsers" parameter="listUsers"/>
+  	<action path="/module/role/delete" parameter="delete"/>
+  	<action path="/module/role/save" parameter="save"/>
+  	<action path="/module/role/update" parameter="update"/>
+  	
+  	<!-- 任务管理 -->
+  	<action path="/module/task/list" parameter="list"/>
+  	<action path="/module/task/add" parameter="add"/>
+  	<action path="/module/task/sendAudit" parameter="sendAudit"/>
+  	<action path="/module/task/audit" parameter="audit"/>
+  	<action path="/module/task/delete" parameter="delete"/>
+  	<action path="/module/task/schedule" parameter="schedule"/>
+  	<action path="/module/task/update" parameter="update"/>
+  	<action path="/module/task/listLog" parameter="listLog"/>
+  	<action path="/module/task/listAudit" parameter="listAudit"/>
+  	<action path="/module/task/listSchedule" parameter="listSchedule"/>
+  	<action path="/module/task/listMy" parameter="listMy"/>
+  	<action path="/module/task/listAll" parameter="listAll"/>
+  	
+	
+  	<!-- 请假管理 
+  	<action path="/module/common/listHoliday" parameter="list"/>
+  	<action path="/module/holidaylog/list" parameter="listLog"/>
+  	<action path="/module/holidaylog/save" parameter="saveLog"/>
+  	<action path="/module/holidaylog/update" parameter="updateLog"/>
+  	<action path="/module/holidaylog/delete" parameter="deleteLog"/>
+  	-->
+  	
+  	<!-- 加班管理 
+  	<action path="/module/overtime/list" parameter="list"/>
+  	<action path="/module/overtime/save" parameter="save"/>
+  	<action path="/module/overtime/delete" parameter="delete"/>
+  	-->
+  	
+	
+  	<!-- 项目管理 -->
+  	<action path="/module/common/list" parameter="list"/>
+  	<action path="/module/project/save" parameter="save"/>
+  	<action path="/module/project/update" parameter="update"/>
+  	<action path="/module/project/delete" parameter="delete"/>
+  	
+
+  </action-mappings>
+  
+  <controller>
+	<set-property value="org.springframework.web.struts.DelegatingRequestProcessor" property="processorClass" />
+  </controller>
+  
+  <message-resources parameter="com.huigao.struts.ApplicationResources" />
+</struts-config>
+

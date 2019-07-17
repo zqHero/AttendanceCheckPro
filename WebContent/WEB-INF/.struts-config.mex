@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/module/common/getJsonTree.do" location="1550,50" dimension="202,60" />
+  <StrutsActivity path="/module/common/getCurrentTime.do" location="1850,50" dimension="220,60" />
+  <StrutsActivity path="/module/common/daka.do" location="1550,250" dimension="160,60" />
+  <StrutsActivity path="/module/common/monthlist.do" location="1850,250" dimension="190,60" />
+  <StrutsActivity path="/module/daka/list.do" location="2150,250" dimension="148,60" />
+  <StrutsActivity path="/module/daka/save.do" location="1550,450" dimension="148,60" />
+  <StrutsActivity path="/module/daka/delete.do" location="1850,450" dimension="160,60" />
+  <StrutsActivity path="/module/daka/monthcollect.do" location="2150,450" dimension="196,60" />
+  <StrutsActivity path="/module/daka/yearcollect.do" location="1550,650" dimension="190,60" />
+  <StrutsActivity path="/module/daka/updateDakaLog.do" location="1850,650" dimension="202,60" />
+  <StrutsActivity path="/module/daka/hasStatistic.do" location="2150,650" dimension="196,60" />
+  <StrutsActivity path="/module/daka/statistic.do" location="1550,850" dimension="178,60" />
+  <StrutsActivity path="/module/common/listTips.do" location="1850,850" dimension="184,60" />
+  <StrutsActivity path="/module/users/check.do" location="2150,850" dimension="160,60" />
+  <StrutsActivity path="/module/users/save.do" location="1550,1050" dimension="154,60" />
+  <StrutsActivity path="/module/common/listUser.do" location="1850,1050" dimension="184,60" />
+  <StrutsActivity path="/module/common/changePassword.do" location="2150,1050" dimension="220,60" />
+  <StrutsActivity path="/module/users/update.do" location="350,1250" dimension="166,60" />
+  <StrutsActivity path="/module/users/delete.do" location="650,1250" dimension="166,60" />
+  <StrutsActivity path="/module/users/listByDepartment.do" location="950,1250" dimension="226,60" />
+  <StrutsActivity path="/module/users/listRoles.do" location="1250,1250" dimension="184,60" />
+  <StrutsActivity path="/module/users/updateRoles.do" location="1550,1250" dimension="196,60" />
+  <StrutsActivity path="/module/department/save.do" location="1850,1250" dimension="184,60" />
+  <StrutsActivity path="/module/common/listDepartment.do" location="2150,1250" dimension="220,60" />
+  <StrutsActivity path="/module/department/update.do" location="50,1450" dimension="196,60" />
+  <StrutsActivity path="/module/department/delete.do" location="350,1450" dimension="196,60" />
+  <StrutsActivity path="/module/department/detail.do" location="650,1450" dimension="196,60" />
+  <StrutsActivity path="/module/resource/list.do" location="950,1450" dimension="172,60" />
+  <StrutsActivity path="/module/resource/update.do" location="1250,1450" dimension="184,60" />
+  <StrutsActivity path="/module/resource/listRole.do" location="1550,1450" dimension="196,60" />
+  <StrutsActivity path="/module/role/list.do" location="1850,1450" dimension="148,60" />
+  <StrutsActivity path="/module/role/listUsers.do" location="2150,1450" dimension="178,60" />
+  <StrutsActivity path="/module/role/delete.do" location="50,1650" dimension="160,60" />
+  <StrutsActivity path="/module/role/save.do" location="350,1650" dimension="148,60" />
+  <StrutsActivity path="/module/role/update.do" location="650,1650" dimension="160,60" />
+  <StrutsActivity path="/module/task/list.do" location="350,550" dimension="148,60" />
+  <StrutsActivity path="/module/task/add.do" location="650,550" dimension="142,60" />
+  <StrutsActivity path="/module/task/sendAudit.do" location="950,550" dimension="178,60" />
+  <StrutsActivity path="/module/task/audit.do" location="1250,550" dimension="154,60" />
+  <StrutsActivity path="/module/task/delete.do" location="50,650" dimension="160,60" />
+  <StrutsActivity path="/module/task/schedule.do" location="1250,750" dimension="172,60" />
+  <StrutsActivity path="/module/task/update.do" location="50,1050" dimension="160,60" />
+  <StrutsActivity path="/module/task/listLog.do" location="350,1050" dimension="166,60" />
+  <StrutsActivity path="/module/task/listAudit.do" location="50,1250" dimension="178,60" />
+  <StrutsActivity path="/module/task/listSchedule.do" location="950,1950" dimension="196,60" />
+  <StrutsActivity path="/module/task/listMy.do" location="1250,1950" dimension="160,60" />
+  <StrutsActivity path="/module/task/listAll.do" location="1550,1950" dimension="166,60" />
+  <StrutsActivity path="/module/project/save.do" location="350,850" dimension="166,60" />
+  <StrutsActivity path="/module/project/update.do" location="650,850" dimension="178,60" />
+  <StrutsActivity path="/module/project/delete.do" location="950,850" dimension="178,60" />
+  <StrutsActivity path="login;6" location="650,1050" dimension="106,72" />
+  <StrutsActivity path="main;6" location="950,1050" dimension="100,72" />
+  <StrutsActivity path="/index.jsp" location="1250,1050" dimension="100,48" />
+  <StrutsActivity path="/main.jsp" location="1250,1150" dimension="94,48" />
+  <StrutsActivity path="/module/common/list.do" />
+  <StrutsTransition id="main;6,null,/main.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1000,1122" />
+      <AbsolutePoint location="1000,1174" />
+      <AbsolutePoint location="1250,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="login;6,null,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="703,1050" />
+      <AbsolutePoint location="703,925" />
+      <AbsolutePoint location="1330,925" />
+      <AbsolutePoint location="1330,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

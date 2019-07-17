@@ -1,0 +1,88 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	text-align: left;
+	vertical-align: baseline;
+	font-size:14px;
+	line-height:28px;
+	color:#333333;
+	text-decoration:none;
+}
+
+ul,li{
+    list-style-position:inside;
+	list-style-type:none;
+}
+p{
+   text-indent:2em;
+}
+	
+a img {border:none;}
+
+.togetherCover{
+  margin:0 auto;
+  width:900px;
+  text-align:center;
+  padding-top:150px;
+}
+.togetherCover *{ text-align:center;}
+.togetherCover h1{
+	background:url(../WeTogetherRight.files/image004.jpg) no-repeat 30px;
+	font-size:30px;
+	margin-bottom: 60px;
+	color:#006699;
+}
+.togetherCover h2{
+  background:url(../WeTogetherRight.files/image006.jpg) no-repeat 350px;
+  margin-top:150px;
+  font-weight:normal;
+}
+.togetherCover h3{
+	background:url(../WeTogetherRight.files/image008.jpg) no-repeat 280px;
+	font-weight:normal;
+
+}
+.cover{
+ position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-200px;
+  margin-left:-210px;
+}
+.cover img{
+ 
+}
+.page{
+ padding:30px;
+}
+
+.page h1{
+ color:#006699;
+ background:url(../images/title.gif);
+ border:1px solid #cbe7fe;
+ margin-top:20px;
+ height:28px;
+}
+.page h1.first{
+	background:url(../images/bb_bb.jpg);
+	border-bottom:none;
+	font-size:14px;
+	display: block;
+}
+.page .pageContent{
+	border:1px solid #cbe7fe;
+	border-top:none;
+	padding:8px;
+	overflow: hidden;
+}
+
+.pageContent img{
+   margin-top:30px;
+   margin-left:20%;
+}

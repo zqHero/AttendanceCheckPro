@@ -18,20 +18,20 @@ public class ServletContextLoaderListener implements ServletContextListener {
 	
 	private Logger logger = Logger.getLogger(this.getClass());
 	
-    public void contextInitialized(ServletContextEvent servletContextEvent) {  
-        ServletContext servletContext = servletContextEvent.getServletContext();  
-        com.huigao.security.SecurityManager securityManager = this.getSecurityManager(servletContext);  
-        Map<String, String> urlAuthorities = securityManager.loadUrlAuthorities();  
+    public void contextInitialized(ServletContextEvent servletContextEvent) {
+        System.out.println("----------ServletContextLoaderListener-contextInitialized-================");
+        ServletContext servletContext = servletContextEvent.getServletContext();
+        com.huigao.security.SecurityManager securityManager = this.getSecurityManager(servletContext);
+        Map<String, String> urlAuthorities = securityManager.loadUrlAuthorities();
         servletContext.setAttribute("urlAuthorities", urlAuthorities);
-        logger.debug(urlAuthorities); 
-    }  
+        logger.debug(urlAuthorities);
+    }
       
     public void contextDestroyed(ServletContextEvent servletContextEvent) {  
-        servletContextEvent.getServletContext().removeAttribute("urlAuthorities");  
+//        servletContextEvent.getServletContext().removeAttribute("urlAuthorities");
     }
     
     protected com.huigao.security.SecurityManager getSecurityManager(ServletContext servletContext) {  
        return (com.huigao.security.SecurityManager) WebApplicationContextUtils.getWebApplicationContext(servletContext).getBean("securityManager");   
-    }  
-  
+    }
 }  

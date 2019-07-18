@@ -20,11 +20,12 @@ public class SecurityChangeOperation {
 	 * 权限修改操作
 	 * @param request 请求对象
 	 */
-	public static void operate(HttpServletRequest request) {  
-		ServletContext servletContext = request.getSession().getServletContext();  
-		com.huigao.security.SecurityManager securityManager = SecurityChangeOperation.getSecurityManager(servletContext);  
-		Map<String, String> urlAuthorities = securityManager.loadUrlAuthorities();  
-		servletContext.removeAttribute("urlAuthorities"); 
+	public static void operate(HttpServletRequest request) {
+		System.out.println("----------SecurityChangeOperation-operate-================");
+		ServletContext servletContext = request.getSession().getServletContext();
+		com.huigao.security.SecurityManager securityManager = SecurityChangeOperation.getSecurityManager(servletContext);
+		Map<String, String> urlAuthorities = securityManager.loadUrlAuthorities();
+		servletContext.removeAttribute("urlAuthorities");
 		servletContext.setAttribute("urlAuthorities", urlAuthorities);
 	}
 	

@@ -33,6 +33,7 @@ public class SecurityManagerSupport extends HibernateDaoSupport implements UserD
 	 */
 	@Autowired
     public void init(SessionFactory sessionFactory) {
+        System.out.println("----------SecurityManagerSupport----------init---------");
         super.setSessionFactory(sessionFactory);
     }
 	
@@ -55,11 +56,15 @@ public class SecurityManagerSupport extends HibernateDaoSupport implements UserD
      */
     @SuppressWarnings("unchecked")
 	public Map<String, String> loadUrlAuthorities() {
+
+        System.out.println("----------SecurityManagerSupport--loadUrlAuthorities-================");
+
         Map<String, String> urlAuthorities = new HashMap<String, String>();
         List<Resource> urlResources = getHibernateTemplate().find("FROM Resource resource WHERE resource.type = ?", "URL");
         for(Resource resource : urlResources) {
             urlAuthorities.put(resource.getValue(), resource.getRoleAuthorities());
+            System.out.println(resource.toJsonString());
         }
-        return urlAuthorities;
+        return new HashMap<String, String>();
     }
 }

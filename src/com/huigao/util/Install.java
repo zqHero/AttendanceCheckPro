@@ -117,18 +117,15 @@ public class Install {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		
+		System.out.println("--------------------------createDb1---");
 		Install.createDb("localhost", "3306", "xietong_db", "root", "admin");
+		System.out.println("--------------------------createDb2---");
 		List<String> list = Install.readSql("C:/xietong_db.sql");
 		Install.createTable("localhost", "3306", "xietong_db", "root", "admin", list);
-		
-		System.out.println("---------------------------------------------");
-		
+		System.out.println("--------------------------createDb3---");
+
 		Install.createProcedure("localhost", "3306", "xietong_db", "root", "admin", Install.readProc("c:/statistic_proc.sql"));
 		 
-		System.out.println("ok");  
-		
+		System.out.println("ok");
 	}
-	
-	
 }

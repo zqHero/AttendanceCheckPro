@@ -41,10 +41,22 @@ public class Install {
 	
 	public static void createDb(String dbHost, String dbPort, String dbName,
 			String dbUser, String dbPassword) throws Exception {
+//		jdbc:mysql://localhost:3306/xietong_db?useSSL=true&amp;verifyServerCertificate=false&amp;serverTimezone=GMT％2B8
+
 		Class.forName("com.mysql.jdbc.Driver");
-		String connStr = "jdbc:mysql://" + dbHost + ":" + dbPort + "?user="
-				+ dbUser + "&password=" + dbPassword + "&characterEncoding=GBK";
+//		String connStr = "jdbc:mysql://" + dbHost + ":" + dbPort + "?user="
+//				+ dbUser + "&password=" + dbPassword + "&characterEncoding=utf-8";
+
+		String connStr = "jdbc:mysql://localhost:3306?user=root&password=admin" +
+				"&useSSL=true&amp;verifyServerCertificate=false&amp;serverTimezone=GMT％2B8" +
+				"&autoReconnect=true&failOverReadOnly=false" +
+				"&useUnicode=true&characterEncoding=utf-8";
+		System.out.println("---------------createDb---dbHost-conn" + connStr);
+
 		Connection conn = DriverManager.getConnection(connStr);
+
+		System.out.println("---------------createDb---dbHost-conn" + conn );
+
 		Statement stat = conn.createStatement();
 		String sql = "drop database if exists " + dbName;
 		stat.execute(sql);
@@ -90,6 +102,7 @@ public class Install {
 	
 	public static void createProcedure(String dbHost, String dbPort, String dbName,
 			String dbUser, String dbPassword, String sql) throws Exception {
+		System.out.println("-------------------------------------------createProcedure------");
 		Connection conn = getConn(dbHost, dbPort, dbName, dbUser, dbPassword);
 		Statement stat = conn.createStatement();
 		stat.execute(sql);
@@ -102,12 +115,15 @@ public class Install {
 	}
 	
 	public static void updateDbConf(String fileName, String dbHost, String dbPort, String dbName, String dbUser, String dbPassword) throws Exception {
+		System.out.println( "=======================================updateDbConf=========dbHost==" +dbHost +"=="+dbPort + "===" + dbName );
 		// --------- 更新 jdbc.properties --------
 		String s = FileUtils.readFileToString(new File(fileName));
 		String url = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName + "?useUnicode=true&amp;characterEncoding=UTF-8";
-		s = s.replaceFirst("XIETONG_URL", url); 
+		s = s.replaceFirst("XIETONG_URL", url);
 		s = s.replaceFirst("XIETONG_USER", dbUser);
 		s = s.replaceFirst("XIETONG_PASSWORD", dbPassword);
+		System.out.println( "=======================================updateDbConf=========s==" + s);
+
 		FileUtils.writeStringToFile(new File(fileName), s);
 	}
 	
@@ -117,15 +133,16 @@ public class Install {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		System.out.println("--------------------------createDb1---");
-		Install.createDb("localhost", "3306", "xietong_db", "root", "admin");
-		System.out.println("--------------------------createDb2---");
-		List<String> list = Install.readSql("C:/xietong_db.sql");
-		Install.createTable("localhost", "3306", "xietong_db", "root", "admin", list);
-		System.out.println("--------------------------createDb3---");
-
-		Install.createProcedure("localhost", "3306", "xietong_db", "root", "admin", Install.readProc("c:/statistic_proc.sql"));
-		 
-		System.out.println("ok");
+//		System.out.println("--------------------------createDb1---");
+//		Install.createDb("localhost", "3306", "xietong_db", "root", "admin");
+//
+//		System.out.println("--------------------------createDb2---");
+//		List<String> list = Install.readSql("C:/xietong_db.sql");
+//
+//		Install.createTable("localhost", "3306", "xietong_db", "root", "admin", list);
+//		System.out.println("--------------------------createDb3---");
+//
+//		Install.createProcedure("localhost", "3306", "xietong_db", "root", "admin", Install.readProc("c:/statistic_proc.sql"));
+//		System.out.println("ok");
 	}
 }

@@ -33,7 +33,7 @@ public class SecurityManagerSupport extends HibernateDaoSupport implements UserD
 	 */
 	@Autowired
     public void init(SessionFactory sessionFactory) {
-        System.out.println("----------SecurityManagerSupport----------init---------");
+        System.out.println("----------SecurityManagerSupport----------init---------" + sessionFactory);
         super.setSessionFactory(sessionFactory);
     }
 	
@@ -43,7 +43,8 @@ public class SecurityManagerSupport extends HibernateDaoSupport implements UserD
      */
     @SuppressWarnings("unchecked")
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException, DataAccessException {
-        List<Users> users = getHibernateTemplate().find("FROM Users WHERE userName = ? AND disabled = false", userName);
+        String tableNa = "t_user";
+        List<Users> users = getHibernateTemplate().find("from " + tableNa + " u where u.userName = ?", userName);
         if(users.isEmpty()) {
             throw new UsernameNotFoundException("用户 " + userName + "没有权限");
         }
@@ -56,14 +57,13 @@ public class SecurityManagerSupport extends HibernateDaoSupport implements UserD
      */
     @SuppressWarnings("unchecked")
 	public Map<String, String> loadUrlAuthorities() {
-
-        System.out.println("----------SecurityManagerSupport--loadUrlAuthorities-================");
-
         Map<String, String> urlAuthorities = new HashMap<String, String>();
-        List<Resource> urlResources = getHibernateTemplate().find("FROM Resource resource WHERE resource.type = ?", "URL");
+        String tableNa = "t_resource";
+        List<Resource> urlResources = getHibernateTemplate().find("from " + tableNa + " r where r.type = ?", "URL");
+        System.out.println("------------------------" + urlResources.toString());
         for(Resource resource : urlResources) {
             urlAuthorities.put(resource.getValue(), resource.getRoleAuthorities());
-            System.out.println(resource.toJsonString());
+            System.out.println(resource.toJsonString() + "===============");
         }
         return new HashMap<String, String>();
     }

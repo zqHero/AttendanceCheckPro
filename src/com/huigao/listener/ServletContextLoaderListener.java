@@ -22,13 +22,15 @@ public class ServletContextLoaderListener implements ServletContextListener {
         System.out.println("----------ServletContextLoaderListener-contextInitialized-================");
         ServletContext servletContext = servletContextEvent.getServletContext();
         com.huigao.security.SecurityManager securityManager = this.getSecurityManager(servletContext);
+        System.out.println("----------asd---------------------" + securityManager.loadUrlAuthorities());
         Map<String, String> urlAuthorities = securityManager.loadUrlAuthorities();
+        System.out.println("----------asd---------------------");
         servletContext.setAttribute("urlAuthorities", urlAuthorities);
         logger.debug(urlAuthorities);
     }
       
     public void contextDestroyed(ServletContextEvent servletContextEvent) {  
-//        servletContextEvent.getServletContext().removeAttribute("urlAuthorities");
+        servletContextEvent.getServletContext().removeAttribute("urlAuthorities");
     }
     
     protected com.huigao.security.SecurityManager getSecurityManager(ServletContext servletContext) {  

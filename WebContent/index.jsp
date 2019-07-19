@@ -1,6 +1,4 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
-<%@ page import="org.springframework.security.context.SecurityContextHolder"%>
-<%@ page import="com.huigao.pojo.Users"%>
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <%
 	String path = request.getContextPath();
@@ -83,7 +81,7 @@
 									<DIV style="LEFT: 735px; PADDING-TOP: 5px; POSITION: absolute">
 										<IMG height=20 src="images/white_lock.gif" width=14 border=0>
 									</DIV>
-									<DIV style="PADDING-LEFT: 35px; PADDING-BOTTOM: 20px; PADDING-TOP: 40px; align: left; font-size: 20;font-family: '幼圆'"><img src="images/xietong.gif">WeTogether员工考勤管理及任务管理系统1.0</DIV>
+									<DIV style="PADDING-LEFT: 35px; PADDING-BOTTOM: 20px; PADDING-TOP: 40px; align: left; font-size: 20px;font-family: '幼圆'"><img src="images/xietong.gif">WeTogether员工考勤管理及任务管理系统1.0</DIV>
 									<DIV style="PADDING-RIGHT: 15px; PADDING-LEFT: 35px">
 										<TABLE cellSpacing=0 cellPadding=0 width=689 border=0>
 											<TBODY>
@@ -101,8 +99,8 @@
 																</TR>
 															</TBODY>
 														</TABLE>
-														<!-- Begin Form -->
-														<form method="post" action="j_spring_security_check" name="form1" onsubmit="return check()">
+														<!-- Begin Form  <a href="index.jsp">-->
+														<form method="post" action="/main" name="form1" onsubmit="return check()">
 															<TABLE cellSpacing=0 cellPadding=0 width=318 border=0>
 																<TBODY>
 																	<TR>

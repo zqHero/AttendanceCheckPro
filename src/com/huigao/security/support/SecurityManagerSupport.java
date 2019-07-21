@@ -42,7 +42,8 @@ public class SecurityManagerSupport extends HibernateDaoSupport implements UserD
      */
     @SuppressWarnings("unchecked")
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException, DataAccessException {
-        List<Users> users = getHibernateTemplate().find("FROM Users WHERE userName = ? AND disabled = false", userName);
+        String tabName = "Users";
+        List<Users> users = getHibernateTemplate().find("FROM " + tabName + " u WHERE u.userName = ? AND u.disabled = false", userName);
         if(users.isEmpty()) {
             throw new UsernameNotFoundException("用户 " + userName + "没有权限");
         }
@@ -56,7 +57,8 @@ public class SecurityManagerSupport extends HibernateDaoSupport implements UserD
     @SuppressWarnings("unchecked")
 	public Map<String, String> loadUrlAuthorities() {
         Map<String, String> urlAuthorities = new HashMap<String, String>();
-        List<Resource> urlResources = getHibernateTemplate().find("FROM Resource resource WHERE resource.type = ?", "URL");
+        String tabName = "Resource";
+        List<Resource> urlResources = getHibernateTemplate().find("FROM " + tabName + " resource WHERE resource.type = ?", "URL");
         for(Resource resource : urlResources) {
             urlAuthorities.put(resource.getValue(), resource.getRoleAuthorities());
         }

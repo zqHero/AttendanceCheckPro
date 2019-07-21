@@ -4,12 +4,10 @@
 # Port     : 3306
 # Database : xietong_db
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES gbk */;
-
+/*!40101 SET NAMES utf8 */;
 
 DROP DATABASE IF EXISTS `xietong_db`;
 
@@ -320,7 +318,6 @@ INSERT INTO `t_user` (`id`, `birthday`, `gender`, `password`, `realName`, `schoo
 #
 # Data for the `t_dakalog` table  (LIMIT 0,500)
 #
-
 INSERT INTO `t_dakalog` (`id`, `users_id`, `date1`, `date2`, `date3`, `date4`, `tip1_id`, `tip2_id`, `tip3_id`, `tip4_id`) VALUES 
   (114,20,'2009-08-03 09:00:00','2009-08-03 11:50:00','2009-08-03 13:30:00','2009-08-03 18:42:42',1,6,1,6),
   (115,21,'2009-08-03 09:00:00','2009-08-03 11:50:00','2009-08-03 13:30:00','2009-08-03 19:00:00',1,6,1,6),
@@ -404,10 +401,6 @@ INSERT INTO `t_dakalog` (`id`, `users_id`, `date1`, `date2`, `date3`, `date4`, `
   (197,18,'2009-08-25 08:44:04','2009-08-25 11:50:00','2009-08-25 13:30:00','2009-08-25 18:33:07',1,6,1,6),
   (198,17,'2009-08-25 08:46:19','2009-08-25 11:50:00','2009-08-25 13:30:00','2009-08-25 18:42:32',1,6,1,6),
   (199,19,'2009-08-25 08:48:38','2009-08-25 11:50:00','2009-08-25 13:30:00','2009-08-25 18:45:24',1,6,1,6),
-  (200,22,NULL,'2009-08-03 11:50:00',NULL,NULL,NULL,NULL,NULL,NULL),
-  (201,19,'2009-08-03 09:00:00','2009-08-03 11:50:00','2009-08-03 13:30:00','2009-08-03 18:43:05',1,6,1,6),
-  (202,18,'2009-08-03 09:00:00','2009-08-03 11:50:00','2009-08-03 13:30:00','2009-08-03 18:45:00',1,6,1,6),
-  (203,4,NULL,'2009-08-04 11:50:00',NULL,NULL,NULL,NULL,NULL,NULL),
   (204,21,'2009-08-25 09:09:44','2009-08-25 11:45:00','2009-08-25 13:30:00','2009-08-25 18:45:00',1,6,1,6),
   (205,20,'2009-08-26 08:42:26','2009-08-26 11:50:00','2009-08-26 13:30:00','2009-08-26 18:53:40',1,6,1,6),
   (206,17,'2009-08-26 08:47:22','2009-08-26 11:50:00','2009-08-26 13:30:00','2009-08-26 18:55:52',1,6,1,6),
@@ -447,20 +440,12 @@ INSERT INTO `t_dakalog` (`id`, `users_id`, `date1`, `date2`, `date3`, `date4`, `
   (240,19,'2009-09-04 08:42:38','2009-09-04 11:50:00','2009-09-04 13:30:00','2009-09-04 18:31:00',1,6,1,6),
   (241,18,'2009-09-04 08:52:52','2009-09-04 11:50:00','2009-09-04 13:30:00','2009-09-04 18:27:54',1,6,1,6),
   (242,21,'2009-09-04 09:03:21','2009-09-04 11:50:00','2009-09-04 13:30:00','2009-09-04 19:26:24',1,6,1,6),
-  (243,17,'2009-09-04 09:17:43','2009-09-04 11:50:00','2009-09-04 13:30:00','2009-09-04 18:30:11',3,6,1,6),
-  (244,20,'2009-09-07 08:35:00',NULL,NULL,NULL,1,NULL,NULL,NULL),
-  (245,19,'2009-09-07 08:43:38',NULL,NULL,NULL,1,NULL,NULL,NULL),
-  (246,18,'2009-09-07 08:52:13',NULL,NULL,NULL,1,NULL,NULL,NULL),
-  (247,21,'2009-09-07 08:59:03',NULL,NULL,NULL,1,NULL,NULL,NULL),
-  (248,21,'2009-08-31 08:45:00','2009-08-31 12:00:00','2009-08-31 13:30:00','2009-08-31 18:30:00',1,6,1,6),
-  (249,17,'2009-09-07 09:19:15',NULL,NULL,NULL,3,NULL,NULL,NULL);
+  (243,17,'2009-09-04 09:17:43','2009-09-04 11:50:00','2009-09-04 13:30:00','2009-09-04 18:30:11',3,6,1,6);
 
 #COMMIT;
 
 #
 # Data for the `t_holiday` table  (LIMIT 0,500)
-#
-
 INSERT INTO `t_holiday` (`id`, `holidayName`) VALUES 
   (1,'事假'),
   (2,'病假'),
@@ -471,8 +456,6 @@ INSERT INTO `t_holiday` (`id`, `holidayName`) VALUES
 
 #
 # Data for the `t_holidaylog` table  (LIMIT 0,500)
-#
-
 INSERT INTO `t_holidaylog` (`id`, `endTime`, `reason`, `startTime`, `holiday_id`, `users_id`) VALUES 
   (1,'2009-07-17 15:26:00','xxxxx','2009-07-13 09:26:00',1,4);
 
@@ -507,8 +490,6 @@ INSERT INTO `t_project` (`id`, `projectdescription`, `projectname`) VALUES
 #COMMIT;
 #
 # Data for the `t_resource` table  (LIMIT 0,500)
-#
-
 INSERT INTO `t_resource` (`id`, `type`, `value`, `description`) VALUES 
   (3,'URL','/module/users/*','员工管理'),
   (4,'URL','/module/resource/*','权限管理'),
@@ -524,8 +505,6 @@ INSERT INTO `t_resource` (`id`, `type`, `value`, `description`) VALUES
 
 #
 # Data for the `t_role` table  (LIMIT 0,500)
-#
-
 INSERT INTO `t_role` (`id`, `description`, `name`) VALUES 
   (7,'打卡管理员','ROLE_12482501801403'),
   (9,'后台管理员','ROLE_12493735764849'),
@@ -536,9 +515,7 @@ INSERT INTO `t_role` (`id`, `description`, `name`) VALUES
 #COMMIT;
 
 #
-# Data for the `t_role_resource` table  (LIMIT 0,500)
-#
-
+# Data for the `t_role_resource` table  (LIMIT 0,500)ss
 INSERT INTO `t_role_resource` (`role_id`, `resource_id`) VALUES 
   (7,6),
   (9,3),
@@ -553,24 +530,7 @@ INSERT INTO `t_role_resource` (`role_id`, `resource_id`) VALUES
 #COMMIT;
 
 #
-# Data for the `t_statistic` table  (LIMIT 0,500)
-#
-
-INSERT INTO `t_statistic` (`id`, `businessTime`, `countOfEO`, `countOfLate`, `month`, `overTime`, `sickTime`, `vacationTime`, `workTime`, `year`, `users_id`) VALUES 
-  (99,0,0,0,8,0,0,0,0,2009,4),
-  (100,0,0,1,8,0,0,0,623250,2009,17),
-  (101,0,0,0,8,0,0,0,630078,2009,18),
-  (102,27000,0,1,8,0,0,0,603942,2009,19),
-  (103,11400,0,0,8,0,0,0,639880,2009,20),
-  (104,0,0,4,8,0,0,0,627726,2009,21),
-  (105,0,0,0,8,0,0,0,0,2009,22);
-
-#COMMIT;
-
-#
 # Data for the `t_task` table  (LIMIT 0,500)
-#
-
 INSERT INTO `t_task` (`id`, `priority`, `taskdescription`, `taskname`, `taskstate`, `tasktype`, `project_id`, `users_id`) VALUES 
   (25,'高','xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx','xxx','已完成','修改任务',3,18), 
   (26,'高','qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq','qqq','已完成','修改任务',3,18),
@@ -617,8 +577,6 @@ INSERT INTO `t_task` (`id`, `priority`, `taskdescription`, `taskname`, `taskstat
 
 #
 # Data for the `t_tasklog` table  (LIMIT 0,500)
-#
-
 INSERT INTO `t_tasklog` (`id`, `action`, `date`, `executor_id`, `operator_id`, `task_id`, `result`) VALUES 
   (5,'提交任务','2009-08-11 17:20:35',NULL,18,42,NULL),
   (6,'添加任务','2009-08-13 09:06:13',17,21,44,NULL),
@@ -678,31 +636,8 @@ INSERT INTO `t_tasklog` (`id`, `action`, `date`, `executor_id`, `operator_id`, `
 #COMMIT;
 
 #
-# Data for the `t_user_role` table  (LIMIT 0,500)
-#
-
-INSERT INTO `t_user_role` (`user_id`, `role_id`) VALUES 
-  (17,11),
-  (17,12),
-  (18,11),
-  (18,12),
-  (19,11),
-  (19,12),
-  (20,7),
-  (20,11),
-  (20,12),
-  (21,7),
-  (21,9),
-  (21,10),
-  (21,11),
-  (21,12);
-
-#COMMIT;
-
-#
 # Data for the `t_worktime` table  (LIMIT 0,500)
 #
-
 INSERT INTO `t_worktime` (`id`, `description`, `time`) VALUES 
   (1,'上班','09:00:00'),
   (2,'上午下班','11:50:00'),

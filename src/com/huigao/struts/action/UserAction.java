@@ -284,6 +284,7 @@ public class UserAction extends MappingDispatchActionSupport {
 		String uids = request.getParameter("uids");
 		if(uids != null) {
 			String[] uid = uids.split(",");
+			System.out.println( "=================delete===" + uids);
 			for (int i = 0; i < uid.length; i++) {
 				try {
 					userService.deleteUsersById(new Integer(uid[i]));

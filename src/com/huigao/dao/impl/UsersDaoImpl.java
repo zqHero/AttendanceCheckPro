@@ -23,7 +23,8 @@ public class UsersDaoImpl extends HibernateDaoSupport implements UsersDao {
 	}
 	
 	public boolean checkUsername(String username) {
-		return ((Long)getHibernateTemplate().findByNamedParam(" select count(*) from Users where userName=:username ","username",username).get(0))>0;
+		String tabName = "Users";
+		return ((Long)getHibernateTemplate().findByNamedParam(" select count(*) from " + tabName +" u where u.userName=:username ","username",username).get(0))>0;
 	} 
 	
 	@SuppressWarnings("unchecked")
@@ -36,8 +37,9 @@ public class UsersDaoImpl extends HibernateDaoSupport implements UsersDao {
 	public List<Users> listByDepartment(final int departmentID,final int start, final int limit) {
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from Users ";
-				if(departmentID != 0) hql = hql + " where department.id= " + departmentID;
+				String tabName = "Users";
+				String hql = "from " + tabName;
+				if(departmentID != 0) hql = hql + " u where u.department.id= " + departmentID;
 				return session.createQuery(hql).setFirstResult(start).setMaxResults(limit).list();
 			}
 		});
@@ -46,8 +48,9 @@ public class UsersDaoImpl extends HibernateDaoSupport implements UsersDao {
 	@SuppressWarnings("unchecked")
 	public List<Users> listByDepartmentAndRealName(final int departmentId,final String  realName){
 		if(departmentId == 0) {
-			String hql = " from Users ";
-			if(realName != null&&!realName.startsWith(" ")) hql = hql + " where userName like '" + realName + "%' ";
+			String tabName = "Users";
+			String hql = " from " + tabName;
+			if(realName != null&&!realName.startsWith(" ")) hql = hql + " u where u.userName like '" + realName + "%' ";
 			return getHibernateTemplate().find(hql);
 		} else {
 			String hql = " from Users where department.id=:departmentId ";
@@ -58,15 +61,17 @@ public class UsersDaoImpl extends HibernateDaoSupport implements UsersDao {
 	
 	@SuppressWarnings("unchecked")
 	public List<Users> list() {
-		return getHibernateTemplate().find(" from Users ");
+		String tabName = "Users";
+		return getHibernateTemplate().find(" from " + tabName);
 	}
 	
 	public Integer getCountByDepartment(Integer departmentID) {
+		String tabName = "Users";
 		if(departmentID == 0) {
-			String hql = " select count(*) from Users ";
+			String hql = " select count(*) from " + tabName;
 			return ((Long)getHibernateTemplate().find(hql).get(0)).intValue();  
 		} else {
-			String hql = " select count(*) from Users where department.id=:departmentId ";
+			String hql = " select count(*) from " + tabName + " u where u.department.id=:departmentId ";
 			return ((Long)getHibernateTemplate().findByNamedParam(hql,new String[]{"departmentId"},new Object[]{departmentID}).get(0)).intValue();  
 		}
 	}
@@ -77,19 +82,23 @@ public class UsersDaoImpl extends HibernateDaoSupport implements UsersDao {
 	
 	@SuppressWarnings("unchecked")
 	public Users getByUsername(String username) {
-		List<Users> list = getHibernateTemplate().findByNamedParam("from Users where userName=:userName", "userName", username); 
+		String tabName = "Users";
+		List<Users> list = getHibernateTemplate().findByNamedParam("from " + tabName + " u where u.userName=:userName", "userName", username);
 		if(list == null || list.isEmpty()) return null;
 		return list.get(0);
 	}
 	
 	public void delete(Users users) {
+		System.out.println("======================delete=users=" + users.toJsonString());
 		getHibernateTemplate().delete(users);
 	}
 	
 	public void delete(final Integer userId) {
+		System.out.println("======================delete=userId=" + userId);
 		getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				return session.createQuery(" delete Users where id=:userId ").setInteger("userId", userId).executeUpdate();
+				String tabName = "Users";
+				return session.createQuery(" delete " + tabName + " u where u.id=:userId ").setInteger("userId", userId).executeUpdate();
 			}
 		});
 	}

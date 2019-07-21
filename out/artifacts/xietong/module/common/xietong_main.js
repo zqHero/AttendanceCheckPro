@@ -5,6 +5,7 @@ Ext.namespace('Xietong');
 
 Xietong.app = function(){};
 
+//change the theme color
 var changeSkin = new Ext.form.ComboBox({
 	allowBlank:false,
     mode: 'local',
@@ -34,24 +35,23 @@ var changeSkin = new Ext.form.ComboBox({
     }
 });
 
-
+//creat component
 Ext.extend(Xietong.app,Ext.util.Observable,{
-	//顶端
+	//top component
 	header:new Ext.BoxComponent({
 		region:'north',
 		el:'north',
 		height:30,
 		margins:'5'
 	}),
-	
-	//低端
+	//bottom component
 	footer: new Ext.BoxComponent({
 		region:'south',
 		el:'south',
 		height:25
 	}),
 	
-	//实例菜单树形
+	//the left function
 	menuTree:new Ext.tree.TreePanel({
 		title:'功能菜单',
 		region:'west',

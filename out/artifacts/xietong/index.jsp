@@ -91,46 +91,6 @@
                             </span>
                             <span style="padding-right: 20px;"><input type="submit" value="提  交"/></span>
                         </div>
-
-<%--                        <table cellSpacing=0 cellPadding=0 border=0 align="center">--%>
-<%--                            <tr><td height=15></td></tr>--%>
-<%--                            <tr>--%>
-<%--                                <td align=left>--%>
-<%--&lt;%&ndash;                                    <span class=content_black_bold>用户名</span>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                    <div class=form>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                        <INPUT class=form&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                               value="${SPRING_SECURITY_LAST_USERNAME}"&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                               size="25" name="j_username"&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                               id="j_username"></div>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                    <span color="red">${param.error=='true'? '用户名或密码错误' : ''}</span>&ndash;%&gt;--%>
-<%--                                </td>--%>
-<%--                            </tr>--%>
-<%--                            <tr><td height=8></td></tr>--%>
-<%--                            <tr>--%>
-<%--                                <td align=left>--%>
-<%--&lt;%&ndash;                                    <span class=content_black_bold>密码</span>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                    <input class=form value="${users.password}"&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                           type="password" name="j_password" id="j_password"&ndash;%&gt;--%>
-<%--&lt;%&ndash;                                           size="25">&ndash;%&gt;--%>
-<%--                                </td>--%>
-<%--                            </tr>--%>
-<%--                            <tr>--%>
-<%--                                <td height=10>--%>
-<%--                                    <IMG height=10 alt="" src="images/spacer.gif" width=1--%>
-<%--                                         border=0/>--%>
-<%--                                </td>--%>
-<%--                            </tr>--%>
-<%--                            <tr>--%>
-<%--                                <td colspan="2">--%>
-<%--                                    &nbsp;&nbsp;--%>
-<%--                                </td>--%>
-<%--                            </tr>--%>
-<%--                            <tr>--%>
-<%--                                <td colspan="2" noWrap align=right>--%>
-
-<%--                                </td>--%>
-<%--                            </tr>--%>
-<%--                        </table>--%>
                     </form>
                 </div>
                 <div style="height: 180px;width: 2px;background-color: #d0d0d0"></div>

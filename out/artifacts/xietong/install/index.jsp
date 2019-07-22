@@ -2,8 +2,6 @@
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-
-	System.out.println("=======================install=====================");
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -16,7 +14,7 @@
   <body>
     <form action="install/setup.jsp" method="post">
 	<table width="900" align="center" style="border:#106DBA 1px solid; margin-top:30px;">
-	  <caption><img src="images/xietong.gif">WeTogether员工考勤管理及任务管理系统1.0安装</caption>
+	  <caption><img src="images/xietong.gif">员工考勤管理及任务管理系统1.0安装</caption>
 	  <tr>
 	    <td bgcolor="#D1E9FA"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 	      <tr>
@@ -77,7 +75,7 @@
 	  </tr>
 	</table>
 	<center>
-	<img src="images/spider.gif"  style="margin-bottom:-5px;"><span style="font-size:12px;">蜘蛛工作室出品&nbsp; &nbsp;</span><img src="images/logo.gif" style="margin-bottom:-5px;"><a href="http://www.zhzhcn.cn/" style="font-size:12px;"> 汇高网讯科技（北京）有限公司</a><span style="font-size:12px;">版权所有&nbsp;&nbsp;</span><a href="<%=path %>/copyRight/copyRight.html" style="font-size:12px;">版权声明</a>
+	<img src="images/spider.gif"  style="margin-bottom:-5px;"><span style="font-size:12px;">蜘蛛工作室出品&nbsp;&nbsp;</span><img src="images/logo.gif" style="margin-bottom:-5px;"><a href="http://www.zhzhcn.cn/" style="font-size:12px;"> 汇高网讯科技（北京）有限公司</a><span style="font-size:12px;">版权所有&nbsp;&nbsp;</span><a href="<%=path %>/copyRight/copyRight.html" style="font-size:12px;">版权声明</a>
 	</center>
 	</form>
   </body>

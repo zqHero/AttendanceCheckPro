@@ -44,6 +44,7 @@ public class Install {
 //		jdbc:mysql://localhost:3306/xietong_db?useSSL=true&amp;verifyServerCertificate=false&amp;serverTimezone=GMT％2B8
 
 		Class.forName("com.mysql.jdbc.Driver");
+
 //		String connStr = "jdbc:mysql://" + dbHost + ":" + dbPort + "?user="
 //				+ dbUser + "&password=" + dbPassword + "&characterEncoding=utf-8";
 
@@ -51,6 +52,7 @@ public class Install {
 				"&useSSL=true&amp;verifyServerCertificate=false&amp;serverTimezone=GMT％2B8" +
 				"&autoReconnect=true&failOverReadOnly=false" +
 				"&useUnicode=true&characterEncoding=utf-8";
+
 		System.out.println("---------------createDb---dbHost-conn" + connStr);
 
 		Connection conn = DriverManager.getConnection(connStr);

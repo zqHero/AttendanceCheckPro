@@ -11,7 +11,6 @@
   </global-forwards>
   
   <action-mappings>
-  
     <!-- 导航菜单 -->
   	<action path="/module/common/getJsonTree" parameter="getJsonTree"/>
     
@@ -74,30 +73,24 @@
   	<action path="/module/task/listSchedule" parameter="listSchedule"/>
   	<action path="/module/task/listMy" parameter="listMy"/>
   	<action path="/module/task/listAll" parameter="listAll"/>
-  	
-	
-  	<!-- 请假管理 
+
+  	<!-- 请假管理 -->
   	<action path="/module/common/listHoliday" parameter="list"/>
   	<action path="/module/holidaylog/list" parameter="listLog"/>
   	<action path="/module/holidaylog/save" parameter="saveLog"/>
   	<action path="/module/holidaylog/update" parameter="updateLog"/>
   	<action path="/module/holidaylog/delete" parameter="deleteLog"/>
-  	-->
-  	
-  	<!-- 加班管理 
+
+  	<!-- 加班管理 -->
   	<action path="/module/overtime/list" parameter="list"/>
   	<action path="/module/overtime/save" parameter="save"/>
   	<action path="/module/overtime/delete" parameter="delete"/>
-  	-->
-  	
-	
+
   	<!-- 项目管理 -->
   	<action path="/module/common/list" parameter="list"/>
   	<action path="/module/project/save" parameter="save"/>
   	<action path="/module/project/update" parameter="update"/>
   	<action path="/module/project/delete" parameter="delete"/>
-  	
-
   </action-mappings>
   
   <controller>

@@ -42,27 +42,26 @@
 	<bean name="/module/department/detail" class="com.huigao.struts.action.DepartmentAction"/>
 	
 	
-	<!-- 请假管理 
+	<!-- 请假管理 -->
 	<bean name="/module/common/listHoliday" class="com.huigao.struts.action.HolidayAction"/>
 	<bean name="/module/holidaylog/save" class="com.huigao.struts.action.HolidayAction"/>
 	<bean name="/module/holidaylog/list" class="com.huigao.struts.action.HolidayAction"/>
 	<bean name="/module/holidaylog/update" class="com.huigao.struts.action.HolidayAction"/>
 	<bean name="/module/holidaylog/delete" class="com.huigao.struts.action.HolidayAction"/>
-	-->
+
 	
-	<!-- 加班管理 
+	<!-- 加班管理 -->
 	<bean name="/module/overtime/save" class="com.huigao.struts.action.OverTimeAction"/>
 	<bean name="/module/overtime/list" class="com.huigao.struts.action.OverTimeAction"/>
 	<bean name="/module/overtime/delete" class="com.huigao.struts.action.OverTimeAction"/>
-	-->
+
 	
 	<!-- 权限管理 -->
 	<bean name="/module/resource/list" class="com.huigao.struts.action.ResourceAction"/>
 	<bean name="/module/resource/detail" class="com.huigao.struts.action.ResourceAction"/>
 	<bean name="/module/resource/update" class="com.huigao.struts.action.ResourceAction"/>
 	<bean name="/module/resource/listRole" class="com.huigao.struts.action.ResourceAction"/>
-	
-	
+
 	<!-- 角色管理 -->
 	<bean name="/module/role/list" class="com.huigao.struts.action.RoleAction"/>
 	<bean name="/module/role/listUsers" class="com.huigao.struts.action.RoleAction"/>

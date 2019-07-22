@@ -129,8 +129,7 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 			border:false,
 			items:[this.header,this.main,this.footer,this.menuTree]
 		});
-		this.loadMask = new Ext.LoadMask(this.main.body,{msg:"页面加载中……"}); 
-
+		this.loadMask = new Ext.LoadMask(this.main.body,{msg:"页面加载中……"});
 	},
 	menuClickAction:function(node){
 		if(!node.isLeaf()){   
@@ -206,7 +205,6 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
             this.menuTree.getSelectionModel().clearSelections();
         }  
 	}
-
 });
 
 
@@ -238,5 +236,4 @@ function $import(url){
 Ext.onReady(function(){
     var xietong = new Xietong.app();
 	xietong.init();
-	
 });

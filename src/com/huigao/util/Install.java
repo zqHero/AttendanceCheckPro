@@ -13,7 +13,7 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 
 public class Install {
-	
+
 	public static List<String> readSql(String fileName) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(
 				new FileInputStream(fileName), "UTF-8"));
@@ -21,7 +21,7 @@ public class Install {
 		StringBuilder sqlSb = new StringBuilder();
 		String s = null;
 		while ((s = br.readLine()) != null) {
-			if (s.startsWith("/*") || s.startsWith("#") || s.trim().equals("")) { 
+			if (s.startsWith("/*") || s.startsWith("#") || s.trim().equals("")) {
 				continue;
 			}
 			if (s.endsWith(";")) {
@@ -36,29 +36,15 @@ public class Install {
 		br.close();
 		return sqlList;
 	}
-	
-	
-	
+
+
+
 	public static void createDb(String dbHost, String dbPort, String dbName,
-			String dbUser, String dbPassword) throws Exception {
-//		jdbc:mysql://localhost:3306/xietong_db?useSSL=true&amp;verifyServerCertificate=false&amp;serverTimezone=GMT％2B8
-
+								String dbUser, String dbPassword) throws Exception {
 		Class.forName("com.mysql.jdbc.Driver");
-
-//		String connStr = "jdbc:mysql://" + dbHost + ":" + dbPort + "?user="
-//				+ dbUser + "&password=" + dbPassword + "&characterEncoding=utf-8";
-
-		String connStr = "jdbc:mysql://localhost:3306?user=root&password=admin" +
-				"&useSSL=true&amp;verifyServerCertificate=false&amp;serverTimezone=GMT％2B8" +
-				"&autoReconnect=true&failOverReadOnly=false" +
-				"&useUnicode=true&characterEncoding=utf-8";
-
-		System.out.println("---------------createDb---dbHost-conn" + connStr);
-
+		String connStr = "jdbc:mysql://" + dbHost + ":" + dbPort + "?user="
+				+ dbUser + "&password=" + dbPassword + "&characterEncoding=GBK";
 		Connection conn = DriverManager.getConnection(connStr);
-
-		System.out.println("---------------createDb---dbHost-conn" + conn );
-
 		Statement stat = conn.createStatement();
 		String sql = "drop database if exists " + dbName;
 		stat.execute(sql);
@@ -68,9 +54,9 @@ public class Install {
 		stat.close();
 		conn.close();
 	}
-	
+
 	public static void changeDbCharset(String dbHost, String dbPort,
-			String dbName, String dbUser, String dbPassword) throws Exception {
+									   String dbName, String dbUser, String dbPassword) throws Exception {
 		Connection conn = getConn(dbHost, dbPort, dbName, dbUser, dbPassword);
 		Statement stat = conn.createStatement();
 		String sql = "ALTER DATABASE " + dbName
@@ -79,10 +65,10 @@ public class Install {
 		stat.close();
 		conn.close();
 	}
-	
-	
+
+
 	public static Connection getConn(String dbHost, String dbPort,
-			String dbName, String dbUser, String dbPassword) throws Exception {
+									 String dbName, String dbUser, String dbPassword) throws Exception {
 		Class.forName("com.mysql.jdbc.Driver");
 		String connStr = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName
 				+ "?user=" + dbUser + "&password=" + dbPassword
@@ -90,10 +76,10 @@ public class Install {
 		Connection conn = DriverManager.getConnection(connStr);
 		return conn;
 	}
-	
-	
+
+
 	public static void createTable(String dbHost, String dbPort, String dbName,
-			String dbUser, String dbPassword, List<String> sqlList) throws Exception {
+								   String dbUser, String dbPassword, List<String> sqlList) throws Exception {
 		Connection conn = getConn(dbHost, dbPort, dbName, dbUser, dbPassword);
 		Statement stat = conn.createStatement();
 		for (String sql : sqlList) stat.addBatch(sql);
@@ -101,50 +87,41 @@ public class Install {
 		stat.close();
 		conn.close();
 	}
-	
+
 	public static void createProcedure(String dbHost, String dbPort, String dbName,
-			String dbUser, String dbPassword, String sql) throws Exception {
-		System.out.println("-------------------------------------------createProcedure------");
+									   String dbUser, String dbPassword, String sql) throws Exception {
 		Connection conn = getConn(dbHost, dbPort, dbName, dbUser, dbPassword);
 		Statement stat = conn.createStatement();
 		stat.execute(sql);
 		stat.close();
 		conn.close();
 	}
-	
-	public static String readProc(String fileName) throws Exception{ 
+
+	public static String readProc(String fileName) throws Exception{
 		return FileUtils.readFileToString(new File(fileName));
 	}
-	
+
 	public static void updateDbConf(String fileName, String dbHost, String dbPort, String dbName, String dbUser, String dbPassword) throws Exception {
-		System.out.println( "=======================================updateDbConf=========dbHost==" +dbHost +"=="+dbPort + "===" + dbName );
 		// --------- 更新 jdbc.properties --------
 		String s = FileUtils.readFileToString(new File(fileName));
 		String url = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName + "?useUnicode=true&amp;characterEncoding=UTF-8";
 		s = s.replaceFirst("XIETONG_URL", url);
 		s = s.replaceFirst("XIETONG_USER", dbUser);
 		s = s.replaceFirst("XIETONG_PASSWORD", dbPassword);
-		System.out.println( "=======================================updateDbConf=========s==" + s);
-
 		FileUtils.writeStringToFile(new File(fileName), s);
 	}
-	
+
 	public static void updateWebConf(String fromFile, String toFile) throws Exception {
 		// --------- 更新 web.xml --------
 		FileUtils.copyFile(new File(fromFile), new File(toFile));
 	}
-	
+
 	public static void main(String[] args) throws Exception {
-//		System.out.println("--------------------------createDb1---");
-//		Install.createDb("localhost", "3306", "xietong_db", "root", "admin");
-//
-//		System.out.println("--------------------------createDb2---");
+//		Install.createDb("localhost", "3306", "xietong_db", "root", "1");
 //		List<String> list = Install.readSql("C:/xietong_db.sql");
-//
-//		Install.createTable("localhost", "3306", "xietong_db", "root", "admin", list);
-//		System.out.println("--------------------------createDb3---");
-//
-//		Install.createProcedure("localhost", "3306", "xietong_db", "root", "admin", Install.readProc("c:/statistic_proc.sql"));
+//		Install.createTable("localhost", "3306", "xietong_db", "root", "1", list);
+//		System.out.println("---------------------------------------------");
+//		Install.createProcedure("localhost", "3306", "xietong_db", "root", "1", Install.readProc("c:/statistic_proc.sql"));
 //		System.out.println("ok");
 	}
 }

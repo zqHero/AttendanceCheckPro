@@ -1,1 +1,0 @@
-<div id="task-query-main" style="width:100%; height:100%"></div>

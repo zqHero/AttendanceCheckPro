@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="xietong">
+    <output-path>$PROJECT_DIR$/out/artifacts/xietong</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="xietong/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="xietong" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

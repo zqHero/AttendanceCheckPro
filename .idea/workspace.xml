@@ -6,137 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92d65122-4619-415f-8f6f-e2523066b582" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/META-INF/xietong.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/authz.tld" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/DakaDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/DepartmentDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/HolidayDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/OverTimeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/ProjectDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/ResourceDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/RoleDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/StatisticDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/SystemTipsDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/TaskDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/UsersDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/WorkTimeDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/DakaDaoImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/DakaDaoImpl$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/DakaDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/DepartmentDaoImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/DepartmentDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/HolidayDaoImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/HolidayDaoImpl$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/HolidayDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/OverTimeDaoImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/OverTimeDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/ProjectDaoImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/ProjectDaoImpl$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/ProjectDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/ResourceDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/RoleDaoImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/RoleDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/StatisticDaoImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/StatisticDaoImpl$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/StatisticDaoImpl$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/StatisticDaoImpl$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/StatisticDaoImpl$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/StatisticDaoImpl$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/StatisticDaoImpl$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/StatisticDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/SystemTipsDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/TaskDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/UsersDaoImpl$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/UsersDaoImpl$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/UsersDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/dao/impl/WorkTimeDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/listener/ServletContextLoaderListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/DakaLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/Department.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/Holiday.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/HolidayLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/OverTime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/Project.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/Resource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/Role.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/Statistic.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/SystemTips.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/Task.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/TaskLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/pojo/WorkTime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/security/SecurityManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/security/interceptor/SecureResourceFilterInvocationDefinitionSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/security/interceptor/SecurityChangeOperation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/security/support/SecurityManagerSupport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/security/support/SecurityUserHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/DakaService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/DepartmentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/HolidayService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/OverTimeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/ProjectService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/ResourceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/RoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/StatisticService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/SystemTipsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/TaskService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/DakaServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/DepartmentServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/HolidayServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/OverTimeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/ProjectServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/ResourceServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/RoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/StatisticServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/SystemTipsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/TaskServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/ApplicationResources.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/DakaAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/DepartmentAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/ExtTreeAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/HolidayAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/OverTimeAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/ProjectAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/ResourceAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/RoleAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/SystemTipsAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/TaskAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/struts/action/UserAction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/util/DateUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/util/Install.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/util/JsonUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/util/Pager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/util/StringUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/huigao/vo/DakaVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/ehcache.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/hibernate.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/spring-dao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/spring-security.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/spring-service.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/spring-web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/xietong/WEB-INF/classes/META-INF/xietong.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/xietong/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/xietong/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/xietong/install/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/xietong/install/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/xietong/install/setup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/xietong/install/setup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/xietong/module/common/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/xietong/module/common/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/huigao/util/Install.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/huigao/util/Install.java" afterDir="false" />
-    </list>
+    <list default="true" id="92d65122-4619-415f-8f6f-e2523066b582" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -162,8 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/huigao/util/Install.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="-2024">
+              <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -174,16 +44,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/install/setup.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
+            <state relative-caret-position="828">
               <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-              <folding>
-                <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#2238#2244#0#HTML" expanded="true" />
-                <element signature="e#2244#2250#0#HTML" expanded="true" />
-                <element signature="e#2250#2256#0#HTML" expanded="true" />
-                <element signature="e#2256#2262#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -191,7 +53,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/huigao/listener/ServletContextLoaderListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="391">
               <caret line="24" column="89" selection-start-line="24" selection-start-column="89" selection-end-line="24" selection-end-column="89" />
             </state>
           </provider>
@@ -200,16 +62,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/huigao/security/support/SecurityManagerSupport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="1173">
               <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#0#6#0" expanded="true" />
-                <element signature="e#0#34#1" expanded="true" />
-                <element signature="e#1773#1803#0" expanded="true" />
-                <element signature="e#1965#1981#0" expanded="true" />
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#0#44#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -218,14 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring.jar!/org/springframework/orm/hibernate3/HibernateTemplate.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="10603">
               <caret line="582" selection-start-line="582" selection-end-line="582" />
-              <folding>
-                <element signature="e#4333#4334#0" expanded="true" />
-                <element signature="e#4391#4392#0" expanded="true" />
-                <element signature="e#23290#23807#0" expanded="true" />
-                <element signature="e#23806#23807#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -249,6 +99,9 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -281,19 +134,19 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="128" />
-    <option name="y" value="12" />
-    <option name="width" value="1708" />
-    <option name="height" value="1039" />
+    <option name="x" value="317" />
+    <option name="y" value="17" />
+    <option name="width" value="1477" />
+    <option name="height" value="1048" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,6 +163,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -438,6 +293,7 @@
       <workItem from="1563440626905" duration="4208000" />
       <workItem from="1563444863991" duration="543000" />
       <workItem from="1563496622988" duration="22131000" />
+      <workItem from="1563758223305" duration="1013000" />
     </task>
     <task id="LOCAL-00001" summary="测试">
       <created>1563365209219</created>
@@ -460,11 +316,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563518710760</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改bug">
+      <created>1563758334669</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563758334669</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37923000" />
+    <option name="totallyTimeSpent" value="38936000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,7 +339,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="130" y="12" width="1365" height="830" extended-state="0" />
+    <frame x="254" y="14" width="1181" height="838" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -487,7 +350,7 @@
       <window_info id="Learn" order="5" weight="0.32889733" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info id="Designer" order="7" />
-      <window_info content_ui="combo" id="Project" order="8" visible="true" weight="0.21117061" />
+      <window_info content_ui="combo" id="Project" order="8" visible="true" weight="0.21015137" />
       <window_info id="Structure" order="9" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.3286908" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32707775" />
@@ -496,7 +359,7 @@
       <window_info anchor="bottom" id="Messages" order="4" weight="0.32956153" />
       <window_info anchor="bottom" id="Java Enterprise" order="5" weight="0.32841823" />
       <window_info anchor="bottom" id="Database Changes" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.41399416" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.34419262" />
       <window_info anchor="bottom" id="Application Servers" order="8" weight="0.3073593" />
       <window_info anchor="bottom" id="Message" order="9" />
       <window_info anchor="bottom" id="Find" order="10" />
@@ -556,6 +419,32 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="测试" />
     <MESSAGE value="修改bug" />
@@ -565,38 +454,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/huigao/util/Install.java</url>
-          <line>41</line>
-          <properties class="com.huigao.util.Install" method="createDb">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/huigao/listener/ServletContextLoaderListener.java</url>
           <line>20</line>
           <properties class="com.huigao.listener.ServletContextLoaderListener" method="contextInitialized">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/huigao/util/Install.java</url>
-          <line>45</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/huigao/util/Install.java</url>
-          <line>47</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/huigao/util/Install.java</url>
-          <line>48</line>
-          <properties />
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/huigao/listener/ServletContextLoaderListener.java</url>
@@ -1020,46 +883,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring.jar!/org/springframework/orm/hibernate3/HibernateTemplate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="582" selection-start-line="582" selection-end-line="582" />
-          <folding>
-            <element signature="e#4333#4334#0" expanded="true" />
-            <element signature="e#4391#4392#0" expanded="true" />
-            <element signature="e#23290#23807#0" expanded="true" />
-            <element signature="e#23806#23807#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/huigao/security/SecurityManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/huigao/listener/ServletContextLoaderListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="24" column="89" selection-start-line="24" selection-start-column="89" selection-end-line="24" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/huigao/security/support/SecurityManagerSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#0#6#0" expanded="true" />
-            <element signature="e#0#34#1" expanded="true" />
-            <element signature="e#1773#1803#0" expanded="true" />
-            <element signature="e#1965#1981#0" expanded="true" />
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#0#44#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1079,23 +906,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/install/setup.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="828">
           <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/huigao/listener/ServletContextLoaderListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="89" selection-start-line="24" selection-start-column="89" selection-end-line="24" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/huigao/security/support/SecurityManagerSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2238#2244#0#HTML" expanded="true" />
-            <element signature="e#2244#2250#0#HTML" expanded="true" />
-            <element signature="e#2250#2256#0#HTML" expanded="true" />
-            <element signature="e#2256#2262#0#HTML" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/spring.jar!/org/springframework/orm/hibernate3/HibernateTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10603">
+          <caret line="582" selection-start-line="582" selection-end-line="582" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/huigao/util/Install.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="-2024">
+          <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

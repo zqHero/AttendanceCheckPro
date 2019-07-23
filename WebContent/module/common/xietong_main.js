@@ -50,7 +50,6 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 		el:'south',
 		height:25
 	}),
-	
 	//the left function
 	menuTree:new Ext.tree.TreePanel({
 		title:'功能菜单',
@@ -104,6 +103,7 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 			})]
 		})
 	}),
+
 	menuRoot: new Ext.tree.AsyncTreeNode({
 		text:'协同管理系统',
 		draggable:false,
@@ -121,6 +121,7 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 	init:function(){
 		this.menuTree.setRootNode(this.menuRoot);
 		this.menuRoot.expand();
+
 		this.menuTree.on('click',this.menuClickAction,this);
 		this.main.on('tabchange', this.changeTab, this);
 		
@@ -131,6 +132,7 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 		});
 		this.loadMask = new Ext.LoadMask(this.main.body,{msg:"页面加载中……"});
 	},
+
 	menuClickAction:function(node){
 		if(!node.isLeaf()){   
             return false;   
@@ -163,7 +165,7 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 							url: tabJsArray[i].js,   
 							scope: this,   
 							success: function(response){
-								jsStr+=response.responseText; 
+								jsStr += response.responseText;
 								if(currentIndex==num-1){ 
 									this[node.id] = eval(jsStr);   
 									model = new this[node.id]();
@@ -179,7 +181,7 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 									msg:"您没有权限",
 									buttons:Ext.MessageBox.OK,
 									icon: Ext.MessageBox.ERROR,
-									fn:function(){ mm.remove(tab); }
+									fn:function(){mm.remove(tab);}
 								});
 								loadmask.hide(); 
 							}
@@ -196,6 +198,7 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
             this.main.setActiveTab(tab);
         }
 	},
+
 	changeTab:function(tab,newtab){
         var nodeId = newtab.id.replace('tab-','');
         var node = this.menuTree.getNodeById(nodeId);
@@ -206,7 +209,6 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
         }  
 	}
 });
-
 
 /**
  * 加载外部js文件

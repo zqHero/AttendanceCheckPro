@@ -24,20 +24,22 @@ import com.huigao.security.support.SecurityUserHolder;
 
 /**
  * 导航树操作
- *
- * @author cgx
  * @version 1.0
  */
 public class ExtTreeAction extends MappingDispatchActionSupport {
 
     private Logger logger = Logger.getLogger(this.getClass());
 
+    ExtTreeAction(){
+        System.out.println("=====123132132=");
+    }
+
     /**
      * 生成导航树的json对象字符串
      * @throws Exception
      */
     public ActionForward getJsonTree(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        logger.debug( "==========生成的资源数组============getJsonTree==" + request);
+
         boolean daka = false; //是否有打卡管理的权限
         boolean holiday = false;
         boolean user = false; //是否有用户管理的权限
@@ -60,6 +62,7 @@ public class ExtTreeAction extends MappingDispatchActionSupport {
         for (int i = 0; i < m.size(); i++) {
             String key = it.next();
             List<Resource> list = m.get(key);
+
             for (int j = 0; j < list.size(); j++) {
                 Resource r = list.get(j);
                 if (r.getValue().contains("/module/daka")) daka = true;
@@ -304,7 +307,7 @@ public class ExtTreeAction extends MappingDispatchActionSupport {
 
         response.setCharacterEncoding("UTF-8");
         response.getWriter().print(array);
-        logger.debug( "==========生成的资源数组==============" + array);
+        logger.debug(array);
         return null;
     }
 

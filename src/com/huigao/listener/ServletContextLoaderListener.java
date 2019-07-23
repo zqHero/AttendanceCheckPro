@@ -19,12 +19,9 @@ public class ServletContextLoaderListener implements ServletContextListener {
 	private Logger logger = Logger.getLogger(this.getClass());
 	
     public void contextInitialized(ServletContextEvent servletContextEvent) {
-        System.out.println("----------ServletContextLoaderListener-contextInitialized-================");
         ServletContext servletContext = servletContextEvent.getServletContext();
         com.huigao.security.SecurityManager securityManager = this.getSecurityManager(servletContext);
-        System.out.println("----------asd---------------------" + securityManager.loadUrlAuthorities());
         Map<String, String> urlAuthorities = securityManager.loadUrlAuthorities();
-        System.out.println("----------asd---------------------");
         servletContext.setAttribute("urlAuthorities", urlAuthorities);
         logger.debug(urlAuthorities);
     }

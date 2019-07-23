@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.huigao.security.support;
 
@@ -26,45 +26,42 @@ import com.huigao.security.SecurityManager;
  */
 @Service("securityManager")
 public class SecurityManagerSupport extends HibernateDaoSupport implements UserDetailsService, SecurityManager {
-    
-	/**
-	 * 在对象实例化的时候自动注入sessionFactory。
-	 * @param sessionFactory 
-	 */
-	@Autowired
+
+    /**
+     * 在对象实例化的时候自动注入sessionFactory。
+     * @param sessionFactory
+     */
+    @Autowired
     public void init(SessionFactory sessionFactory) {
-        System.out.println("----------SecurityManagerSupport----------init---------" + sessionFactory);
         super.setSessionFactory(sessionFactory);
     }
-	
+
     /**
      * 通过用户名加载用户信息
      * @param userName 用户名
      */
     @SuppressWarnings("unchecked")
-	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException, DataAccessException {
-        String tableNa = "t_user";
-        List<Users> users = getHibernateTemplate().find("from " + tableNa + " u where u.userName = ?", userName);
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException, DataAccessException {
+        String tabName = "Users";
+        List<Users> users = getHibernateTemplate().find("FROM " + tabName + " u WHERE u.userName = ? AND u.disabled = false", userName);
         if(users.isEmpty()) {
             throw new UsernameNotFoundException("用户 " + userName + "没有权限");
         }
         return users.get(0);
     }
-    
+
     /**
      * 获取权限关联映射
      * @return 映射
      */
     @SuppressWarnings("unchecked")
-	public Map<String, String> loadUrlAuthorities() {
+    public Map<String, String> loadUrlAuthorities() {
         Map<String, String> urlAuthorities = new HashMap<String, String>();
-        String tableNa = "t_resource";
-        List<Resource> urlResources = getHibernateTemplate().find("from " + tableNa + " r where r.type = ?", "URL");
-        System.out.println("------------------------" + urlResources.toString());
+        String tabName = "Resource";
+        List<Resource> urlResources = getHibernateTemplate().find("FROM " + tabName + " resource WHERE resource.type = ?", "URL");
         for(Resource resource : urlResources) {
             urlAuthorities.put(resource.getValue(), resource.getRoleAuthorities());
-            System.out.println(resource.toJsonString() + "===============");
         }
-        return new HashMap<String, String>();
+        return urlAuthorities;
     }
 }

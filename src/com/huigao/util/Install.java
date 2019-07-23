@@ -37,13 +37,11 @@ public class Install {
 		return sqlList;
 	}
 
-
-
 	public static void createDb(String dbHost, String dbPort, String dbName,
 								String dbUser, String dbPassword) throws Exception {
 		Class.forName("com.mysql.jdbc.Driver");
 		String connStr = "jdbc:mysql://" + dbHost + ":" + dbPort + "?user="
-				+ dbUser + "&password=" + dbPassword + "&characterEncoding=GBK";
+				+ dbUser + "&password=" + dbPassword + "&characterEncoding=UTF8";
 		Connection conn = DriverManager.getConnection(connStr);
 		Statement stat = conn.createStatement();
 		String sql = "drop database if exists " + dbName;
@@ -66,7 +64,6 @@ public class Install {
 		conn.close();
 	}
 
-
 	public static Connection getConn(String dbHost, String dbPort,
 									 String dbName, String dbUser, String dbPassword) throws Exception {
 		Class.forName("com.mysql.jdbc.Driver");
@@ -76,7 +73,6 @@ public class Install {
 		Connection conn = DriverManager.getConnection(connStr);
 		return conn;
 	}
-
 
 	public static void createTable(String dbHost, String dbPort, String dbName,
 								   String dbUser, String dbPassword, List<String> sqlList) throws Exception {

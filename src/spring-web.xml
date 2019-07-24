@@ -55,12 +55,13 @@
 	<bean name="/module/overtime/list" class="com.huigao.struts.action.OverTimeAction"/>
 	<bean name="/module/overtime/delete" class="com.huigao.struts.action.OverTimeAction"/>
 
-	
+
 	<!-- 权限管理 -->
 	<bean name="/module/resource/list" class="com.huigao.struts.action.ResourceAction"/>
 	<bean name="/module/resource/detail" class="com.huigao.struts.action.ResourceAction"/>
 	<bean name="/module/resource/update" class="com.huigao.struts.action.ResourceAction"/>
 	<bean name="/module/resource/listRole" class="com.huigao.struts.action.ResourceAction"/>
+
 
 	<!-- 角色管理 -->
 	<bean name="/module/role/list" class="com.huigao.struts.action.RoleAction"/>

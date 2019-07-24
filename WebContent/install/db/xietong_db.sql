@@ -347,7 +347,7 @@ INSERT INTO `t_holiday` (`id`, `holidayName`) VALUES
 #
 
 INSERT INTO `t_holidaylog` (`id`, `endTime`, `reason`, `startTime`, `holiday_id`, `users_id`) VALUES
-(1,'2009-07-17 15:26:00','xxxxx','2009-07-13 09:26:00',1,4);
+(1,'2009-07-17 15:26:00','xxxxx','2009-07-13 09:26:00',1,21);
 
 #COMMIT;
 
@@ -362,10 +362,8 @@ INSERT INTO `t_overtime` (`id`, `endTime`, `reason`, `startTime`, `user_id`) VAL
 
 #
 # Data for the `t_project` table  (LIMIT 0,500)
-#
-
 INSERT INTO `t_project` (`id`, `projectdescription`, `projectname`) VALUES
-(3,'项目A','项目A');
+(1,'项目A','项目A');
 
 #COMMIT;
 #
@@ -376,6 +374,10 @@ INSERT INTO `t_resource` (`id`, `type`, `value`, `description`) VALUES
 (4,'URL','/module/resource/*','权限管理'),
 (5,'URL','/module/department/*','部门管理'),
 (6,'URL','/module/daka/*','打卡管理'),
+
+(7,'URL','/module/holidaylog/*','请假管理'),
+(8,'URL','/module/overtime/*','时间管理'),
+
 (9,'URL','/module/role/*','角色管理'),
 (12,'URL','/module/task/schedule*','调度任务'),
 (14,'URL','/module/task/audit*','审核任务'),
@@ -388,13 +390,7 @@ INSERT INTO `t_resource` (`id`, `type`, `value`, `description`) VALUES
 # Data for the `t_role` table  (LIMIT 0,500)
 #
 INSERT INTO `t_role` (`id`, `description`, `name`) VALUES
-(5,'管理员','ROLE_15638954912855'),
-(6,'研发部员工','ROLE_15638956398228'),
-(7,'打卡管理员','ROLE_12482501801403'),
-(9,'后台管理员','ROLE_12493735764849'),
-(10,'项目管理','ROLE_12493742580156'),
-(11,'产生任务','ROLE_12493743231875'),
-(12,'审删调任务','ROLE_12493745330000');
+(5,'管理员','ROLE_15638954912855');
 
 #COMMIT;
 
@@ -410,24 +406,12 @@ INSERT INTO `t_role_resource` (`role_id`, `resource_id`) VALUES
 (5,12),
 (5,14),
 (5,15),
-(5,16),
-
-(7,6),
-(9,3),
-(9,4),
-(9,5),
-(9,9),
-(10,15),
-(11,15),
-(12,12),
-(12,14),
-(12,16);
+(5,16);
 
 #COMMIT;
 
 #
 # Data for the `t_statistic` table  (LIMIT 0,500)
-#
 INSERT INTO `t_statistic` (`id`, `businessTime`, `countOfEO`, `countOfLate`, `month`, `overTime`, `sickTime`, `vacationTime`, `workTime`, `year`, `users_id`) VALUES
 (99,0,0,0,8,0,0,0,0,2009,4),
 (100,0,0,1,8,0,0,0,623250,2009,17),
@@ -442,7 +426,7 @@ INSERT INTO `t_statistic` (`id`, `businessTime`, `countOfEO`, `countOfLate`, `mo
 #
 # Data for the `t_task` table  (LIMIT 0,500)
 INSERT INTO `t_task` (`id`, `priority`, `taskdescription`, `taskname`, `taskstate`, `tasktype`, `project_id`, `users_id`) VALUES
-(25,'高','xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx','xxx','已完成','修改任务',3,21);
+(25,'高','xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx','xxx','已完成','修改任务',1,21);
 
 #COMMIT;
 
@@ -455,20 +439,13 @@ INSERT INTO `t_tasklog` (`id`, `action`, `date`, `executor_id`, `operator_id`, `
 
 #
 # Data for the `t_user_role` table  (LIMIT 0,500)
-#
 INSERT INTO `t_user_role` (`user_id`, `role_id`) VALUES
-(21,5),
-(21,7),
-(21,9),
-(21,10),
-(21,11),
-(21,12);
+(21,5);
 
 #COMMIT;
 
 #
 # Data for the `t_worktime` table  (LIMIT 0,500)
-#
 INSERT INTO `t_worktime` (`id`, `description`, `time`) VALUES
 (1,'上班','09:00:00'),
 (2,'上午下班','11:50:00'),

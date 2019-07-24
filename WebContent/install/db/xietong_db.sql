@@ -413,20 +413,20 @@ INSERT INTO `t_role_resource` (`role_id`, `resource_id`) VALUES
 #
 # Data for the `t_statistic` table  (LIMIT 0,500)
 INSERT INTO `t_statistic` (`id`, `businessTime`, `countOfEO`, `countOfLate`, `month`, `overTime`, `sickTime`, `vacationTime`, `workTime`, `year`, `users_id`) VALUES
-(99,0,0,0,8,0,0,0,0,2009,4),
-(100,0,0,1,8,0,0,0,623250,2009,17),
-(101,0,0,0,8,0,0,0,630078,2009,18),
-(102,27000,0,1,8,0,0,0,603942,2009,19),
-(103,11400,0,0,8,0,0,0,639880,2009,20),
+(99,0,0,0,8,0,0,0,0,2009,21),
+(100,0,0,1,8,0,0,0,623250,2009,21),
+(101,0,0,0,8,0,0,0,630078,2009,21),
+(102,27000,0,1,8,0,0,0,603942,2009,21),
+(103,11400,0,0,8,0,0,0,639880,2009,21),
 (104,0,0,4,8,0,0,0,627726,2009,21),
-(105,0,0,0,8,0,0,0,0,2009,22);
+(105,0,0,0,8,0,0,0,0,2009,21);
 
 #COMMIT;
 
 #
 # Data for the `t_task` table  (LIMIT 0,500)
-INSERT INTO `t_task` (`id`, `priority`, `taskdescription`, `taskname`, `taskstate`, `tasktype`, `project_id`, `users_id`) VALUES
-(25,'高','xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx','xxx','已完成','修改任务',1,21);
+# INSERT INTO `t_task` (`id`, `priority`, `taskdescription`, `taskname`, `taskstate`, `tasktype`, `project_id`, `users_id`) VALUES
+# (25,'高','xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx','xxx','已完成','修改任务',1,21);
 
 #COMMIT;
 

@@ -4,12 +4,10 @@
 # Port     : 3306
 # Database : xietong_db
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES gbk */;
-
 
 DROP DATABASE IF EXISTS `xietong_db`;
 
@@ -23,8 +21,6 @@ USE `xietong_db`;
 
 #
 # Structure for the `t_systemtip` table :
-#
-
 CREATE TABLE `t_systemtip` (
                                `id` int(11) NOT NULL auto_increment,
                                `tipName` varchar(255) default NULL,
@@ -33,8 +29,6 @@ CREATE TABLE `t_systemtip` (
 
 #
 # Structure for the `t_department` table :
-#
-
 CREATE TABLE `t_department` (
                                 `id` int(11) NOT NULL auto_increment,
                                 `departmentDesc` varchar(255) default NULL,
@@ -44,8 +38,6 @@ CREATE TABLE `t_department` (
 
 #
 # Structure for the `t_user` table :
-#
-
 CREATE TABLE `t_user` (
                           `id` int(11) NOT NULL auto_increment,
                           `birthday` datetime default NULL,
@@ -68,8 +60,6 @@ CREATE TABLE `t_user` (
 
 #
 # Structure for the `t_dakalog` table :
-#
-
 CREATE TABLE `t_dakalog` (
                              `id` int(11) NOT NULL auto_increment,
                              `users_id` int(11) default NULL,
@@ -96,8 +86,6 @@ CREATE TABLE `t_dakalog` (
 
 #
 # Structure for the `t_holiday` table :
-#
-
 CREATE TABLE `t_holiday` (
                              `id` int(11) NOT NULL auto_increment,
                              `holidayName` varchar(255) default NULL,
@@ -106,8 +94,6 @@ CREATE TABLE `t_holiday` (
 
 #
 # Structure for the `t_holidaylog` table :
-#
-
 CREATE TABLE `t_holidaylog` (
                                 `id` int(11) NOT NULL auto_increment,
                                 `endTime` datetime default NULL,
@@ -124,8 +110,6 @@ CREATE TABLE `t_holidaylog` (
 
 #
 # Structure for the `t_overtime` table :
-#
-
 CREATE TABLE `t_overtime` (
                               `id` int(11) NOT NULL auto_increment,
                               `endTime` datetime default NULL,
@@ -139,8 +123,6 @@ CREATE TABLE `t_overtime` (
 
 #
 # Structure for the `t_project` table :
-#
-
 CREATE TABLE `t_project` (
                              `id` int(11) NOT NULL auto_increment,
                              `projectdescription` varchar(255) default NULL,
@@ -150,8 +132,6 @@ CREATE TABLE `t_project` (
 
 #
 # Structure for the `t_resource` table :
-#
-
 CREATE TABLE `t_resource` (
                               `id` int(11) NOT NULL auto_increment,
                               `type` varchar(255) default NULL,
@@ -162,8 +142,6 @@ CREATE TABLE `t_resource` (
 
 #
 # Structure for the `t_role` table :
-#
-
 CREATE TABLE `t_role` (
                           `id` int(11) NOT NULL auto_increment,
                           `description` varchar(255) default NULL,
@@ -173,8 +151,6 @@ CREATE TABLE `t_role` (
 
 #
 # Structure for the `t_role_resource` table :
-#
-
 CREATE TABLE `t_role_resource` (
                                    `role_id` int(11) NOT NULL,
                                    `resource_id` int(11) NOT NULL,
@@ -187,8 +163,6 @@ CREATE TABLE `t_role_resource` (
 
 #
 # Structure for the `t_statistic` table :
-#
-
 CREATE TABLE `t_statistic` (
                                `id` int(11) NOT NULL auto_increment,
                                `businessTime` int(11) default NULL,
@@ -208,8 +182,6 @@ CREATE TABLE `t_statistic` (
 
 #
 # Structure for the `t_task` table :
-#
-
 CREATE TABLE `t_task` (
                           `id` int(11) NOT NULL auto_increment,
                           `priority` varchar(255) default NULL,
@@ -228,8 +200,6 @@ CREATE TABLE `t_task` (
 
 #
 # Structure for the `t_tasklog` table :
-#
-
 CREATE TABLE `t_tasklog` (
                              `id` int(11) NOT NULL auto_increment,
                              `action` varchar(255) default NULL,
@@ -249,8 +219,6 @@ CREATE TABLE `t_tasklog` (
 
 #
 # Structure for the `t_user_role` table :
-#
-
 CREATE TABLE `t_user_role` (
                                `user_id` int(11) NOT NULL,
                                `role_id` int(11) NOT NULL,
@@ -263,8 +231,6 @@ CREATE TABLE `t_user_role` (
 
 #
 # Structure for the `t_worktime` table :
-#
-
 CREATE TABLE `t_worktime` (
                               `id` int(11) NOT NULL auto_increment,
                               `description` varchar(255) default NULL,
@@ -273,10 +239,18 @@ CREATE TABLE `t_worktime` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 
+# data insert;  in here ============================================================================================================================================
+#
+# Data for the `t_worktime` table  (LIMIT 0,500)
+INSERT INTO `t_worktime` (`id`, `description`, `time`) VALUES
+(1,'上班','09:00:00'),
+(2,'上午下班','12:00:00'),
+(3,'下午上班','13:30:00'),
+(4,'下班','18:00:00');
+#COMMIT;
 
-
-# 数据
-
+#
+# Data for the `t_systemtip` table  (LIMIT 0,500)
 INSERT INTO `t_systemtip` (`id`, `tipName`) VALUES
 (1,'正常上班'),
 (2,'一级迟到'),
@@ -289,86 +263,19 @@ INSERT INTO `t_systemtip` (`id`, `tipName`) VALUES
 (9,'病假'),
 (10,'休假'),
 (11,'加班');
-
-#COMMIT;
-
-#
-# Data for the `t_department` table  (LIMIT 0,500)
-#
-
-INSERT INTO `t_department` (`id`, `departmentDesc`, `departmentName`) VALUES
-(2,'销售工作&nbsp;','销售部'),
-(3,'<P>汇高网讯科技（北京）有限公司研发部</P>','研发部');
-
-#COMMIT;
-
-#
-# Data for the `t_user` table  (LIMIT 0,500)
-#
-
-INSERT INTO `t_user` (`id`, `birthday`, `gender`, `password`, `realName`, `school`, `specialty`, `userName`, `department_id`, `superiors_id`, `disabled`) VALUES
-(4,NULL,'男','67c762276bced09ee4df0ed537d164ea','dfg','c','c','c',2,NULL,False),
-(17,NULL,'男','e10adc3949ba59abbe56e057f20f883e','asd','','','asd',3,21,False),
-(18,NULL,'女','e10adc3949ba59abbe56e057f20f883e','zx','','','zx',3,21,False),
-(19,NULL,'女','e10adc3949ba59abbe56e057f20f883e','qwe','','','qwe',3,21,False),
-(20,NULL,'男','e10adc3949ba59abbe56e057f20f883e','safd','','','safd',3,21,False),
-(21,NULL,'男','21232f297a57a5a743894a0e4a801fc3','admin','','','admin',3,4,False),
-(22,'2009-06-30','女','827ccb0eea8a706c4c34a16891f84e7b','d','d','d','d',2,18,False);
-
-#COMMIT;
-
-#
-# Data for the `t_dakalog` table  (LIMIT 0,500)
-#
-
-INSERT INTO `t_dakalog` (`id`, `users_id`, `date1`, `date2`, `date3`, `date4`, `tip1_id`, `tip2_id`, `tip3_id`, `tip4_id`) VALUES
-(114,21,'2019-08-03 09:00:00','2019-08-03 11:50:00','2019-08-03 13:30:00','2019-08-03 18:42:42',1,6,1,6),
-(115,21,'2019-08-03 09:00:00','2019-08-03 11:50:00','2019-08-03 13:30:00','2019-08-03 19:00:00',1,6,1,6),
-(116,21,'2019-08-03 09:00:00','2019-08-03 11:50:00','2019-08-03 13:30:00','2019-08-03 19:36:07',1,6,1,6),
-(117,21,'2019-08-04 08:50:01','2019-08-04 11:50:00','2019-08-04 13:30:00','2019-08-04 19:15:00',1,6,1,6),
-(118,21,'2019-08-04 08:50:16','2019-08-04 11:50:00','2019-08-04 13:30:00','2019-08-04 19:14:11',1,6,1,6);
-
 #COMMIT;
 
 #
 # Data for the `t_holiday` table  (LIMIT 0,500)
-#
-
 INSERT INTO `t_holiday` (`id`, `holidayName`) VALUES
 (1,'事假'),
 (2,'病假'),
 (3,'休假'),
 (4,'加班');
-
 #COMMIT;
 
-#
-# Data for the `t_holidaylog` table  (LIMIT 0,500)
-#
-
-INSERT INTO `t_holidaylog` (`id`, `endTime`, `reason`, `startTime`, `holiday_id`, `users_id`) VALUES
-(1,'2009-07-17 15:26:00','xxxxx','2009-07-13 09:26:00',1,21);
-
-#COMMIT;
-
-#
-# Data for the `t_overtime` table  (LIMIT 0,500)
-#
-
-INSERT INTO `t_overtime` (`id`, `endTime`, `reason`, `startTime`, `user_id`) VALUES
-(4,'2009-07-08 10:28:00','ddddd','2009-07-07 10:28:00',4);
-
-#COMMIT;
-
-#
-# Data for the `t_project` table  (LIMIT 0,500)
-INSERT INTO `t_project` (`id`, `projectdescription`, `projectname`) VALUES
-(1,'项目A','项目A');
-
-#COMMIT;
 #
 # Data for the `t_resource` table  (LIMIT 0,500)
-#
 INSERT INTO `t_resource` (`id`, `type`, `value`, `description`) VALUES
 (3,'URL','/module/users/*','员工管理'),
 (4,'URL','/module/resource/*','权限管理'),
@@ -383,20 +290,16 @@ INSERT INTO `t_resource` (`id`, `type`, `value`, `description`) VALUES
 (14,'URL','/module/task/audit*','审核任务'),
 (15,'URL','/module/project/*','项目管理'),
 (16,'URL','/module/task/taskmanage/*','任务管理（增删改）');
-
 #COMMIT;
 
 #
 # Data for the `t_role` table  (LIMIT 0,500)
-#
 INSERT INTO `t_role` (`id`, `description`, `name`) VALUES
-(5,'管理员','ROLE_15638954912855');
-
+(5,'超级管理员','ROLE_15638954912855');
 #COMMIT;
 
 #
 # Data for the `t_role_resource` table  (LIMIT 0,500)
-#
 INSERT INTO `t_role_resource` (`role_id`, `resource_id`) VALUES
 (5,3),
 (5,4),
@@ -407,51 +310,77 @@ INSERT INTO `t_role_resource` (`role_id`, `resource_id`) VALUES
 (5,14),
 (5,15),
 (5,16);
+#COMMIT;
 
+#
+# Data for the `t_user` table  (LIMIT 0,500)   database must have a user default a user  admin
+INSERT INTO `t_user` (`id`, `birthday`, `gender`, `password`, `realName`, `school`, `specialty`, `userName`, `department_id`, `superiors_id`, `disabled`) VALUES
+(1,'2019-08-08','男','21232f297a57a5a743894a0e4a801fc3','admin','黑塔工作室','产品研发专业','admin',null,null,False);
+#COMMIT;
+
+#
+# Data for the `t_user_role` table  (LIMIT 0,500)  default a Admin
+INSERT INTO `t_user_role` (`user_id`, `role_id`) VALUES
+(1,5);
+#COMMIT;
+
+#
+# Data for the `t_department` table  (LIMIT 0,500)
+# INSERT INTO `t_department` (`id`, `departmentDesc`, `departmentName`) VALUES
+# (2,'负责日常产品销售','销售部'),
+# (3,'负责日常产品研发','研发部');
+#COMMIT;
+
+#
+# Data for the `t_dakalog` table  (LIMIT 0,500)
+# INSERT INTO `t_dakalog` (`id`, `users_id`, `date1`, `date2`, `date3`, `date4`, `tip1_id`, `tip2_id`, `tip3_id`, `tip4_id`) VALUES
+# (114,21,'2019-08-03 09:00:00','2019-08-03 11:50:00','2019-08-03 13:30:00','2019-08-03 18:42:42',1,6,1,6),
+# (115,21,'2019-08-03 09:00:00','2019-08-03 11:50:00','2019-08-03 13:30:00','2019-08-03 19:00:00',1,6,1,6),
+# (116,21,'2019-08-03 09:00:00','2019-08-03 11:50:00','2019-08-03 13:30:00','2019-08-03 19:36:07',1,6,1,6),
+# (117,21,'2019-08-04 08:50:01','2019-08-04 11:50:00','2019-08-04 13:30:00','2019-08-04 19:15:00',1,6,1,6),
+# (118,21,'2019-08-04 08:50:16','2019-08-04 11:50:00','2019-08-04 13:30:00','2019-08-04 19:14:11',1,6,1,6);
+#COMMIT;
+
+#
+# Data for the `t_holidaylog` table  (LIMIT 0,500)
+# INSERT INTO `t_holidaylog` (`id`, `endTime`, `reason`, `startTime`, `holiday_id`, `users_id`) VALUES
+# (1,'2009-07-17 15:26:00','xxxxx','2009-07-13 09:26:00',1,21);
+#COMMIT;
+
+#
+# Data for the `t_overtime` table  (LIMIT 0,500)
+# INSERT INTO `t_overtime` (`id`, `endTime`, `reason`, `startTime`, `user_id`) VALUES
+# (4,'2009-07-08 10:28:00','ddddd','2009-07-07 10:28:00',21);
+#COMMIT;
+
+#
+# Data for the `t_project` table  (LIMIT 0,500)
+# INSERT INTO `t_project` (`id`, `projectdescription`, `projectname`) VALUES
+# (1,'项目A','项目A');
 #COMMIT;
 
 #
 # Data for the `t_statistic` table  (LIMIT 0,500)
-INSERT INTO `t_statistic` (`id`, `businessTime`, `countOfEO`, `countOfLate`, `month`, `overTime`, `sickTime`, `vacationTime`, `workTime`, `year`, `users_id`) VALUES
-(99,0,0,0,8,0,0,0,0,2009,21),
-(100,0,0,1,8,0,0,0,623250,2009,21),
-(101,0,0,0,8,0,0,0,630078,2009,21),
-(102,27000,0,1,8,0,0,0,603942,2009,21),
-(103,11400,0,0,8,0,0,0,639880,2009,21),
-(104,0,0,4,8,0,0,0,627726,2009,21),
-(105,0,0,0,8,0,0,0,0,2009,21);
-
+# INSERT INTO `t_statistic` (`id`, `businessTime`, `countOfEO`, `countOfLate`, `month`, `overTime`, `sickTime`, `vacationTime`, `workTime`, `year`, `users_id`) VALUES
+# (99,0,0,0,8,0,0,0,0,2009,21),
+# (100,0,0,1,8,0,0,0,623250,2009,21),
+# (101,0,0,0,8,0,0,0,630078,2009,21),
+# (102,27000,0,1,8,0,0,0,603942,2009,21),
+# (103,11400,0,0,8,0,0,0,639880,2009,21),
+# (104,0,0,4,8,0,0,0,627726,2009,21),
+# (105,0,0,0,8,0,0,0,0,2009,21);
 #COMMIT;
 
 #
 # Data for the `t_task` table  (LIMIT 0,500)
 # INSERT INTO `t_task` (`id`, `priority`, `taskdescription`, `taskname`, `taskstate`, `tasktype`, `project_id`, `users_id`) VALUES
 # (25,'高','xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx','xxx','已完成','修改任务',1,21);
-
 #COMMIT;
 
 #
 # Data for the `t_tasklog` table  (LIMIT 0,500)
-INSERT INTO `t_tasklog` (`id`, `action`, `date`, `executor_id`, `operator_id`, `task_id`, `result`) VALUES
-(5,'提交任务','2009-08-11 17:20:35',NULL,18,25,NULL);
-
-#COMMIT;
-
-#
-# Data for the `t_user_role` table  (LIMIT 0,500)
-INSERT INTO `t_user_role` (`user_id`, `role_id`) VALUES
-(21,5);
-
-#COMMIT;
-
-#
-# Data for the `t_worktime` table  (LIMIT 0,500)
-INSERT INTO `t_worktime` (`id`, `description`, `time`) VALUES
-(1,'上班','09:00:00'),
-(2,'上午下班','11:50:00'),
-(3,'下午上班','13:30:00'),
-(4,'下班','18:10:00');
-
+# INSERT INTO `t_tasklog` (`id`, `action`, `date`, `executor_id`, `operator_id`, `task_id`, `result`) VALUES
+# (5,'提交任务','2009-08-11 17:20:35',NULL,18,25,NULL);
 #COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

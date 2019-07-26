@@ -161,14 +161,16 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 						 var tabjs = tabJsArray[i].js; 
 						 var currentIndex = i;
 
+
 						 Ext.Ajax.request({   
 							method:'POST',//为了不丢失js文件内容，所以要选择post的方式加载js文件
-							url: tabJsArray[i].js,   
+							url: tabjs,
 							scope: this,   
 							success: function(response){
+
 								jsStr += response.responseText;
-								if(currentIndex==num-1){ 
-									this[node.id] = eval(jsStr);   
+								if(currentIndex==num-1){
+									this[node.id] = eval(jsStr);
 									model = new this[node.id]();
 									loadmask.hide(); 
 								}

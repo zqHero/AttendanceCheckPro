@@ -1,4 +1,5 @@
-<%@ page language="java" pageEncoding="UTF-8" %>
+<!DOCTYPE HTML>
+<%@page language="java" pageEncoding="UTF-8" %>
 <%@page import="com.huigao.security.support.SecurityUserHolder" %>
 <%
     String path = request.getContextPath();
@@ -7,7 +8,7 @@
 <html>
 <head>
     <base href="<%=basePath%>"/>
-    <title>员工考勤管理及任务管理系统</title>
+    <title>协同管理系统</title>
 
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="Bookmark" href="favicon.ico"/>
@@ -44,7 +45,7 @@
     <div id="north" style="visibility:hidden;display: flex;justify-content: space-between">
             <span class="api-title" style="display: flex;align-items: center;">
                 <img src="images/xietong.gif"/>
-                <h2 style="margin-left: 5px">员工考勤管理及任务管理系统</h2>
+                <h2 style="margin-left: 5px">协同管理系统</h2>
             </span>
         <span style="display: flex;align-items: center">
                 欢迎您:<%= SecurityUserHolder.getCurrentUser().getRealName() %>
@@ -63,7 +64,6 @@
                 &nbsp;&nbsp;
             </span>
     </div>
-
     <div id="south">
         <div class="power" id="power" style="visibility:hidden;">&nbsp;</div>
         <div class="bq" id="banquan" style="visibility:hidden;">

@@ -21,7 +21,8 @@ public class SystemTipsDaoImpl extends HibernateDaoSupport implements SystemTips
 
 	@SuppressWarnings("unchecked")
 	public List<SystemTips> list() {
-		return getHibernateTemplate().find(" from SystemTips "); 
+		String tabName = "SystemTips";
+		return getHibernateTemplate().find(" from " + tabName);
 	}
 
 }

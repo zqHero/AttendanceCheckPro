@@ -28,7 +28,7 @@
     <script language="javascript" type="text/javascript" src="js/Ext.ux/Ext.ux.tree.TreeCheckNodeUI.js"></script>
 
     <script language="javascript" type="text/javascript" src="module/common/daka.js"></script>
-    <script language="javascript" type="text/javascript" src="module/common/xietong_main.js"></script>
+    <script language="javascript" type="text/javascript" src="module/common/main.js"></script>
 </head>
 
 <body>
@@ -37,7 +37,7 @@
         <div class="loading-indicator" style="margin-right: 0;padding-right: 0">
             <img src="images/public/loader.gif" width="20" height="20"
                  style="margin-right:8px;float:left;vertical-align:top;"/>
-            <a href="main.jsp">员工考勤管理及任务管理系统</a>
+            <a href="main.jsp">协同管理系统</a>
         </div>
     </div>
 
@@ -55,10 +55,10 @@
                     <h4>注销登录</h4>
                 </a>
                 &nbsp;
-                <a href="${pageContext.request.contextPath}/help_WeTogether/index.html" target="_blank"
+                <a href="${pageContext.request.contextPath}/module/help/index.html"
                    style="display: flex;align-items: center;">
                     <img src="images/help.png"/>
-                    <h4>联机帮助</h4>
+                    <h4>用户手册</h4>
                 </a>
                 &nbsp;&nbsp;
             </span>

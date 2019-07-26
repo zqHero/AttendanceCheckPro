@@ -125,7 +125,7 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 		this.menuTree.on('click',this.menuClickAction,this);
 		this.main.on('tabchange', this.changeTab, this);
 		
-		var myView = new Ext.Viewport({
+		new Ext.Viewport({
 			layout:'border',
 			border:false,
 			items:[this.header,this.main,this.footer,this.menuTree]
@@ -157,9 +157,10 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 				callback:function(a,b,c){
 					var jsStr = ""; 
 					var num = tabJsArray.length;
-					for(var i=0;i<num;i++){
+					for(var i=0;i < num;i++){
 						 var tabjs = tabJsArray[i].js; 
-						 var currentIndex = i; 
+						 var currentIndex = i;
+
 						 Ext.Ajax.request({   
 							method:'POST',//为了不丢失js文件内容，所以要选择post的方式加载js文件
 							url: tabJsArray[i].js,   
@@ -181,7 +182,9 @@ Ext.extend(Xietong.app,Ext.util.Observable,{
 									msg:"您没有权限",
 									buttons:Ext.MessageBox.OK,
 									icon: Ext.MessageBox.ERROR,
-									fn:function(){mm.remove(tab);}
+									fn:function(){
+										mm.remove(tab);
+									}
 								});
 								loadmask.hide(); 
 							}
@@ -231,7 +234,7 @@ function $import(url){
 		    	eval.call(window, xmlhttp.responseText);
 		    }
 	   }
-	}
+	};
 	xmlhttp.send(null);
 }
 

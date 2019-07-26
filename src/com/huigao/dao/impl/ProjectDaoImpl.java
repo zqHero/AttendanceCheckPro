@@ -18,7 +18,8 @@ public class ProjectDaoImpl extends HibernateDaoSupport implements ProjectDao {
 		getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session)
 					throws HibernateException, SQLException {
-				return session.createQuery(" delete Project where id=:id ")
+				String tabName = "Project";
+				return session.createQuery(" delete " + tabName + " p where p.id=:id ")
 					   .setInteger("id", id).executeUpdate();
 			}
 			
@@ -42,7 +43,8 @@ public class ProjectDaoImpl extends HibernateDaoSupport implements ProjectDao {
 
 	public Integer getProjectCount() {
 		// TODO Auto-generated method stub
-		String hql = " select count(*) from Project ";
+		String tabName = "Project";
+		String hql = " select count(*) from " + tabName;
 		return ((Long)getHibernateTemplate().find(hql).get(0)).intValue();
 	}
 	
@@ -51,7 +53,8 @@ public class ProjectDaoImpl extends HibernateDaoSupport implements ProjectDao {
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from Project ";
+				String tabName = "Project";
+				String hql = "from " + tabName;
 				return session.createQuery(hql).setFirstResult(start).setMaxResults(limit).list();
 			}
 		});
@@ -60,7 +63,8 @@ public class ProjectDaoImpl extends HibernateDaoSupport implements ProjectDao {
 	@SuppressWarnings("unchecked")
 	public Project getByName(String projectName) {
 		// TODO Auto-generated method stub
-		List<Project> project = getHibernateTemplate().findByNamedParam("from Project where projectName=:projectName", "projectName", projectName); 
+		String tabName = "Project";
+		List<Project> project = getHibernateTemplate().findByNamedParam("from " + tabName + " p where p.projectName=:projectName", "projectName", projectName);
 		if(project == null || project.isEmpty()) return null;
 		return project.get(0);
 	}

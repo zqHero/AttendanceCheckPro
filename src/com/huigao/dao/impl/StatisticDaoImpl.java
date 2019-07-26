@@ -23,7 +23,8 @@ public class StatisticDaoImpl extends HibernateDaoSupport implements StatisticDa
 	public void delete(final Integer year,final Integer month) {
 		getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = " delete Statistic where year=:year and month=:month ";
+				String tabName = "Statistic";
+				String hql = " delete " + tabName + " s where s.year=:year and s.month=:month ";
 				return session.createQuery(hql)
 							  .setInteger("year", year)
 							  .setInteger("month", month)
@@ -47,7 +48,8 @@ public class StatisticDaoImpl extends HibernateDaoSupport implements StatisticDa
 	public void deleteByUser(final Integer year,final Integer month,final Integer userId) {
 		getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = " delete Statistic where users.id=:userId and year=:year and month=:month ";
+				String tabName = "Statistic";
+				String hql = " delete " + tabName + " s where s.users.id=:userId and s.year=:year and s.month=:month ";
 				return session.createQuery(hql)
 							  .setInteger("userId", userId) 
 							  .setInteger("year", year)
@@ -62,8 +64,9 @@ public class StatisticDaoImpl extends HibernateDaoSupport implements StatisticDa
 			final Integer year, final Integer month, final int start, final int limit) {
 		return getHibernateTemplate().executeFind(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = " from Statistic where year=:year and month=:month  ";
-				if(departmentId != 0)  hql = hql + " and users.department.id=:departmentId ";
+				String tabName = "Statistic";
+				String hql = " from " + tabName + " s where s.year=:year and s.month=:month  ";
+				if(departmentId != 0)  hql = hql + " and s.users.department.id=:departmentId ";
 				Query query = session.createQuery(hql)
 							  .setInteger("year", year)
 						      .setInteger("month", month);
@@ -78,12 +81,14 @@ public class StatisticDaoImpl extends HibernateDaoSupport implements StatisticDa
 			final Integer year,final int start, final int limit) {
 		return (List<Statistic>) getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
+
+				String tabName = "Statistic";
 				
-				String hql = " select users.id, sum(workTime),sum(overTime),sum(businessTime),sum(sickTime), " +
-								" sum(vacationTime),sum(countOfLate), sum(countOfEO), year  from Statistic " +
-								" where year=:year  ";
-				if(departmentId != 0) hql = hql + " and users.department.id=:departmentId  ";
-				hql = hql + " group by year,users.id "; 
+				String hql = " select s.users.id, sum(s.workTime),sum(s.overTime),sum(s.businessTime),sum(s.sickTime), " +
+								" sum(s.vacationTime),sum(s.countOfLate), sum(s.countOfEO), s.year  from " + tabName +
+								" s where s.year=:year  ";
+				if(departmentId != 0) hql = hql + " and s.users.department.id=:departmentId  ";
+				hql = hql + " group by s.year,s.users.id ";
 				
 				Query query = session.createQuery(hql)
 							  .setInteger("year", year);
@@ -117,8 +122,10 @@ public class StatisticDaoImpl extends HibernateDaoSupport implements StatisticDa
 	public Integer getCountByDepartment(final Integer departmentId, final Integer year, final Integer month) {
 		return ((Long) getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "select count(*) from Statistic where year=:year and month=:month  ";
-				if(departmentId != 0)  hql = hql + " and users.department.id=:departmentId ";
+				String tabName = "Statistic";
+				String hql = "select count(*) from " + tabName + " s where s.year=:year and s.month=:month  ";
+				if(departmentId != 0)  hql = hql + " and s.users.department.id=:departmentId ";
+
 				Query query = session.createQuery(hql)
 							  .setInteger("year", year)
 						      .setInteger("month", month);
@@ -131,9 +138,10 @@ public class StatisticDaoImpl extends HibernateDaoSupport implements StatisticDa
 	public Integer getCountByDepartment(final Integer departmentId, final Integer year) {
 		return (Integer) getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = " select users.id from Statistic where year=:year  ";
-				if(departmentId != 0) hql = hql + " and users.department.id=:departmentId  ";
-				hql = hql + " group by year,users.id "; 
+				String tabName = "Statistic";
+				String hql = " select s.users.id from " + tabName + " s where s.year=:year  ";
+				if(departmentId != 0) hql = hql + " and s.users.department.id=:departmentId  ";
+				hql = hql + " group by s.year,s.users.id ";
 				Query query = session.createQuery(hql).setInteger("year", year);
 				if(departmentId != 0) query.setInteger("departmentId", departmentId);
 				return query.list().size(); 

@@ -16,7 +16,8 @@ public class RoleDaoImpl extends HibernateDaoSupport implements RoleDao {
 	public void delete(final Integer roleId) {
 		getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = " delete Role where id=:roleId ";
+				String tabName = "Role";
+				String hql = " delete " + tabName + " r where r.id=:roleId ";
 				return session.createQuery(hql).setInteger("roleId", roleId).executeUpdate();
 			}
 		});
@@ -28,7 +29,8 @@ public class RoleDaoImpl extends HibernateDaoSupport implements RoleDao {
 
 	@SuppressWarnings("unchecked")
 	public List<Role> list() {
-		return getHibernateTemplate().find(" from Role ");
+		String tabName = "Role";
+		return getHibernateTemplate().find(" from " + tabName);
 	}
 
 	public void save(Role role) {

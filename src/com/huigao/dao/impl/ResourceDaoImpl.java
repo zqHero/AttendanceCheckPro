@@ -15,7 +15,8 @@ public class ResourceDaoImpl extends HibernateDaoSupport implements ResourceDao 
 
 	@SuppressWarnings("unchecked")
 	public List<Resource> list() {
-		return getHibernateTemplate().find(" from Resource "); 
+		String tabName = "Resource";
+		return getHibernateTemplate().find(" from " + tabName);
 	}
 	
 	public void update(Resource resource) {

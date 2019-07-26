@@ -22,10 +22,12 @@ public class DakaDaoImpl extends HibernateDaoSupport implements DakaDao {
 	
 	public Integer getCountByDateTime(Integer userId, Date startDate, Date endDate) {
 		if(userId == 0) {
-			String hql = "  select count(*) from DakaLog where date1 between :startDate and :endDate or date3 between :startDate and :endDate  ";
+			String tabName = "DakaLog";
+			String hql = "  select count(*) from " + tabName + " d where d.date1 between :startDate and :endDate or d.date3 between :startDate and :endDate  ";
 			return ((Long) getHibernateTemplate().findByNamedParam(hql, new String[]{"startDate","endDate"}, new Object[]{startDate,endDate}).get(0)).intValue();
 		} else {
-			String hql = "  select count(*) from DakaLog where users.id=:userId and ( date1 between :startDate and :endDate or date3 between :startDate and :endDate ) ";
+			String tabName = "DakaLog";
+			String hql = "  select count(*) from " + tabName + " d where d.users.id=:userId and ( d.date1 between :startDate and :endDate or d.date3 between :startDate and :endDate ) ";
 			return ((Long) getHibernateTemplate().findByNamedParam(hql, new String[]{"userId","startDate","endDate"}, new Object[]{userId,startDate,endDate}).get(0)).intValue();
 		}
 	}
@@ -42,7 +44,8 @@ public class DakaDaoImpl extends HibernateDaoSupport implements DakaDao {
 		day = cal.getTime();
 		cal.add(Calendar.DAY_OF_YEAR, 1);
 		Date d2 = cal.getTime();
-		String hql = " from DakaLog where users.id=:userId and ( date1 between :startDate and :endDate or date2 between :startDate and :endDate or date3 between :startDate and :endDate or date4 between :startDate and :endDate ) ";
+		String tabName = "DakaLog";
+		String hql = " from " + tabName + " d where d.users.id=:userId and ( d.date1 between :startDate and :endDate or d.date2 between :startDate and :endDate or d.date3 between :startDate and :endDate or d.date4 between :startDate and :endDate ) ";
 		List<DakaLog> list = getHibernateTemplate().findByNamedParam(hql, new String[]{"userId","startDate","endDate"}, new Object[]{userId,day,d2});
 		if(list==null || list.isEmpty()) return null;
 		return list.get(0);
@@ -56,9 +59,10 @@ public class DakaDaoImpl extends HibernateDaoSupport implements DakaDao {
 	public List<DakaLog> listByDateTime(final Integer userId, final Date startDate, final Date endDate, final Integer start, final Integer limit) {
 		return (List<DakaLog>) getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = " from DakaLog where ( date1 between :startDate and :endDate or date3 between :startDate and :endDate ) ";
-				if(userId != 0) hql = hql + " and users.id=:userID ";
-				hql = hql + " order by ifnull(date1,date3) asc ";
+				String tabName = "DakaLog";
+				String hql = " from " + tabName + " d where ( d.date1 between :startDate and :endDate or d.date3 between :startDate and :endDate ) ";
+				if(userId != 0) hql = hql + " and d.users.id=:userID ";
+				hql = hql + " order by ifnull(d.date1,d.date3) asc ";
 				Query query = session.createQuery(hql)
 							  .setDate("startDate", startDate)
 						      .setDate("endDate", endDate);
@@ -72,9 +76,10 @@ public class DakaDaoImpl extends HibernateDaoSupport implements DakaDao {
 	public List<DakaLog> listByDateTimeAndDepartment(final Integer departmentId,final Date beginDate,final Date endDate,final Integer start,final Integer limit){ 
 		return (List<DakaLog>) getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = " from DakaLog where ( date1 between :startDate and :endDate or date3 between :startDate and :endDate ) ";
-				if(departmentId.intValue() != 0) hql = hql + " and users.department.id=:departmentId ";
-				hql = hql + " order by ifnull(date1,date3) asc ";
+				String tabName = "DakaLog";
+				String hql = " from " + tabName + " d where ( d.date1 between :startDate and :endDate or d.date3 between :startDate and :endDate ) ";
+				if(departmentId.intValue() != 0) hql = hql + " and d.users.department.id=:departmentId ";
+				hql = hql + " order by ifnull(d.date1,d.date3) asc ";
 				Query query = session.createQuery(hql)
 							  .setDate("startDate", beginDate)
 						      .setDate("endDate", endDate);
@@ -86,10 +91,12 @@ public class DakaDaoImpl extends HibernateDaoSupport implements DakaDao {
 	
 	public Integer getCountByDateTimeAndDepartment(Integer departmentId,Date beginDate,Date endDate){ 
 		if(departmentId == 0) {
-			String hql = "  select count(*) from DakaLog where ( date1 between :startDate and :endDate or date3 between :startDate and :endDate ) ";
+			String tabName = "DakaLog";
+			String hql = "  select count(*) from " + tabName + " d where ( d.date1 between :startDate and :endDate or d.date3 between :startDate and :endDate ) ";
 			return ((Long) getHibernateTemplate().findByNamedParam(hql, new String[]{"startDate","endDate"}, new Object[]{beginDate,endDate}).get(0)).intValue();
 		} else {
-			String hql = " select count(*) from DakaLog where users.department.id=:departmentId and ( date1 between :startDate and :endDate or date3 between :startDate and :endDate ) ";
+			String tabName = "DakaLog";
+			String hql = " select count(*) from " + tabName + " d where d.users.department.id=:departmentId and ( d.date1 between :startDate and :endDate or d.date3 between :startDate and :endDate ) ";
 			return ((Long) getHibernateTemplate().findByNamedParam(hql, new String[]{"departmentId","startDate","endDate"}, new Object[]{departmentId,beginDate,endDate}).get(0)).intValue();
 		}
 	}

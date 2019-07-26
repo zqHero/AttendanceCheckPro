@@ -239,7 +239,7 @@ CREATE TABLE `t_worktime` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 
-# data insert;  in here ============================================================================================================================================
+# data insert;  in here =====================================================================================================================
 #
 # Data for the `t_worktime` table  (LIMIT 0,500)
 INSERT INTO `t_worktime` (`id`, `description`, `time`) VALUES
@@ -305,6 +305,8 @@ INSERT INTO `t_role_resource` (`role_id`, `resource_id`) VALUES
 (5,4),
 (5,5),
 (5,6),
+(5,7),
+(5,8),
 (5,9),
 (5,12),
 (5,14),
@@ -326,9 +328,9 @@ INSERT INTO `t_user_role` (`user_id`, `role_id`) VALUES
 
 #
 # Data for the `t_department` table  (LIMIT 0,500)
-# INSERT INTO `t_department` (`id`, `departmentDesc`, `departmentName`) VALUES
-# (2,'负责日常产品销售','销售部'),
-# (3,'负责日常产品研发','研发部');
+INSERT INTO `t_department` (`id`, `departmentDesc`, `departmentName`) VALUES
+(2,'负责日常产品销售','销售部'),
+(3,'负责日常产品研发','研发部');
 #COMMIT;
 
 #

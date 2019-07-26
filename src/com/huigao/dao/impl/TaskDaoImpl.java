@@ -17,7 +17,8 @@ import com.huigao.pojo.Users;
 public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 
 	public Integer getTaskCount() {
-		String hql = " select count(*) from Task ";
+		String tabName = "Task";
+		String hql = " select count(*) from " + tabName;
 		return ((Long)getHibernateTemplate().find(hql).get(0)).intValue();
 	}
 
@@ -25,7 +26,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 	public List<Task> listTask(final String userName, final int start, final int limit, final String sort, final String dir, final String state ) {
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from Task task";
+				String tabName = "Task";
+				String hql = "from " + tabName + " task";
 				if(userName != "" && userName!=null) hql = hql + " where task.users.userName = '" + userName+"'";
 				if(userName != null && userName != "" && state!=null){
 					if(state.equals("audit")){
@@ -36,9 +38,9 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 				}
 				if((userName == null||userName.equals("")) && state != null){
 					if(state.equals("audit")){
-						hql = hql + " where taskstate = '待审核'";
+						hql = hql + " where task.taskstate = '待审核'";
 					}else if(state.equals("schedule")){
-						hql = hql + " where taskstate != '已完成'";
+						hql = hql + " where task.taskstate != '已完成'";
 					}
 				}
 				if(sort != "" && sort!=null && dir != "" && dir!=null){
@@ -77,7 +79,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from Task where taskstate = '待审核'";
+				String tabName = "Task";
+				String hql = "from " + tabName + " t where t.taskstate = '待审核'";
 				if(sort != "" && sort!=null && dir != "" && dir!=null){
 					if(sort.equals("usersName")){
 						hql = hql + " order by users.realName " + dir;
@@ -105,7 +108,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 		getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session)
 					throws HibernateException, SQLException {
-				return session.createQuery(" delete Task where id=:id ")
+				String tabName = "Task";
+				return session.createQuery(" delete " + tabName + " task where task.id=:id ")
 					   .setInteger("id", id).executeUpdate();
 			}
 			
@@ -117,7 +121,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from Task where taskstate != '已完成'";
+				String tabName = "Task";
+				String hql = "from " + tabName + " t where t.taskstate != '已完成'";
 				if(sort != "" && sort!=null && dir != "" && dir!=null){
 					if(sort.equals("usersName")){
 						hql = hql + " order by users.realName " + dir;
@@ -154,7 +159,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from Task where taskstate = '待完成' and users.id = " + users.getId();
+				String tabName = "Task";
+				String hql = "from " + tabName + " task where task.taskstate = '待完成' and task.users.id = " + users.getId();
 				if(sort != "" && sort!=null && dir != "" && dir!=null){
 					if(sort.equals("usersName")){
 						hql = hql + " order by users.realName " + dir;
@@ -171,7 +177,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 
 	public Integer getTaskCount(String state, Users users) {
 		// TODO Auto-generated method stub
-		String hql = " select count(*) from Task ";
+		String tabName = "Task";
+		String hql = " select count(*) from " + tabName;
 		if(state.equals("schedule")){
 			hql += " where taskstate != '已完成'";	
 		}else if(state.equals("audit")){
@@ -184,7 +191,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 
 	public Integer getLogCount(int taskId) {
 		// TODO Auto-generated method stub
-		String hql = " select count(*) from TaskLog where task.id = " + taskId;
+		String tabName = "TaskLog";
+		String hql = " select count(*) from " + tabName + " t where t.task.id = " + taskId;
 		return ((Long)getHibernateTemplate().find(hql).get(0)).intValue();
 	}
 
@@ -193,7 +201,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from TaskLog where task.id = " + taskId;
+				String tabName = "TaskLog";
+				String hql = "from " + tabName + " t where t.task.id = " + taskId;
 				return session.createQuery(hql).setFirstResult(start).setMaxResults(limit).list();
 			}
 		});
@@ -208,7 +217,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 	public List<Task> listAuditTask(final String userName, final int start, final int limit, final String sort, final String dir){
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from Task where taskstate = '待审核'";
+				String tabName = "Task";
+				String hql = "from " + tabName +" task where task.taskstate = '待审核'";
 				if(!userName.equals("all")) hql += " and users.userName = '" + userName + "'";
 				if(sort != "" && sort!=null && dir != "" && dir!=null){
 					if(sort.equals("usersName")){
@@ -226,27 +236,31 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 
 	public Integer getALLCount(String userName) {
 		// TODO Auto-generated method stub
-		String hql = " select count(*) from Task ";
+		String tabName = "Task";
+		String hql = " select count(*) from " + tabName;
 		if(!userName.equals("all")) hql += " where users.userName like '" + userName + "%'";
 		return ((Long)this.getHibernateTemplate().find(hql).get(0)).intValue();
 	}
 
 	public Integer getAuditCount(String userName) {
 		// TODO Auto-generated method stub
-		String hql = " select count(*) from Task where taskstate = '待审核'";
+		String tabName = "Task";
+		String hql = " select count(*) from " + tabName + " task where task.taskstate = '待审核'";
 		if(!userName.equals("all")) hql += " and users.userName = '" + userName + "'";
 		return ((Long)this.getHibernateTemplate().find(hql).get(0)).intValue();
 	}
 
 	public Integer getMyCount(Users users) {
 		// TODO Auto-generated method stub
-		String hql = " select count(*) from Task where taskstate = '待完成' and users.id = " + users.getId();
+		String tabName = "Task";
+		String hql = " select count(*) from " + tabName + " task where task.taskstate = '待完成' and task.users.id = " + users.getId();
 		return ((Long)this.getHibernateTemplate().find(hql).get(0)).intValue();
 	}
 
 	public Integer getScheduleCount(String userName) {
 		// TODO Auto-generated method stub
-		String hql = " select count(*) from Task where taskstate != '已完成' ";
+		String tabName = "Task";
+		String hql = " select count(*) from " + tabName + " task where task.taskstate != '已完成' ";
 		if(!userName.equals("all")) hql += " and users.userName = '" + userName + "'";
 		return ((Long)this.getHibernateTemplate().find(hql).get(0)).intValue();
 	}
@@ -257,7 +271,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from Task ";
+				String tabName = "Task";
+				String hql = "from " + tabName;
 				if(!userName.equals("all")) hql += " where users.userName like '" + userName + "%'";
 				if(sort != "" && sort!=null && dir != "" && dir!=null){
 					if(sort.equals("usersName")){
@@ -279,7 +294,8 @@ public class TaskDaoImpl extends HibernateDaoSupport implements TaskDao{
 		// TODO Auto-generated method stub
 		return getHibernateTemplate().executeFind(new HibernateCallback() {
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = "from Task where taskstate != '已完成'";
+				String tabName = "Task";
+				String hql = "from " + tabName + " task where task.taskstate != '已完成'";
 				if(!userName.equals("all")) hql += " and users.userName = '" + userName + "'";
 				if(sort != "" && sort!=null && dir != "" && dir!=null){
 					if(sort.equals("usersName")){

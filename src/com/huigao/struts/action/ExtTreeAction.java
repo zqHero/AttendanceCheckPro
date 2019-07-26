@@ -307,6 +307,9 @@ public class ExtTreeAction extends MappingDispatchActionSupport {
 
         response.setCharacterEncoding("UTF-8");
         response.getWriter().print(array);
+
+        response.getWriter().print("{success:true,msg:'打印数组!'}");
+
         logger.debug(array);
         return null;
     }

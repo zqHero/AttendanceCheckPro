@@ -15,7 +15,8 @@ public class WorkTimeDaoImpl extends HibernateDaoSupport implements WorkTimeDao 
 
 	@SuppressWarnings("unchecked")
 	public List<WorkTime> list() {
-		return getHibernateTemplate().find(" from WorkTime ");
+		String tabName = "WorkTime";
+		return getHibernateTemplate().find(" from " + tabName);
 	} 
 
 }

@@ -28,13 +28,15 @@ public class OverTimeDaoImpl extends HibernateDaoSupport implements OverTimeDao 
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(date);
 		cal.set(Calendar.HOUR_OF_DAY, 9);
-		String hql = " select count(*) from OverTime where user=:user and :date between  startTime and endTime ";
+		String tabName = "OverTime";
+		String hql = " select count(*) from " + tabName + " o where o.user=:user and :date between  o.startTime and o.endTime ";
 		return ((Long)(getHibernateTemplate().findByNamedParam(hql, new String[]{"date","user"}, new Object[]{cal.getTime(),user}).get(0))).intValue() > 0;
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<OverTime> list() {
-		return getHibernateTemplate().find(" from OverTime "); 
+		String tabName = "OverTime";
+		return getHibernateTemplate().find(" from " + tabName);
 	}
 	
 	public void save(OverTime overTime) {
@@ -45,13 +47,15 @@ public class OverTimeDaoImpl extends HibernateDaoSupport implements OverTimeDao 
 	public List<OverTime> list(final int start, final int limit) {
 		return getHibernateTemplate().executeFind(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				return session.createQuery("from OverTime").setFirstResult(start).setMaxResults(limit).list();
+				String tabName = "OverTime";
+				return session.createQuery("from " + tabName).setFirstResult(start).setMaxResults(limit).list();
 			}
 		}); 
 	}
 	
 	public Integer getTotalCount(){
-		return ((Long)(getHibernateTemplate().find("select count(*) from OverTime").get(0))).intValue();
+		String tabName = "OverTime";
+		return ((Long)(getHibernateTemplate().find("select count(*) from " + tabName).get(0))).intValue();
 	}
 
 }

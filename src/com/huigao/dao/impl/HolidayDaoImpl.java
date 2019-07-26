@@ -17,8 +17,9 @@ import com.huigao.pojo.HolidayLog;
 public class HolidayDaoImpl extends HibernateDaoSupport implements HolidayDao {
 
 	public Integer getHolidayTime(Integer userId,Integer holidayId, Date startDate, Date endDate) {
-		String hql = " select sum(endTime-startTime) from HolidayLog where holiday.id=:holidayId and users.id=:userId " +
-				" and startTime between :startTime and :endTime  ";
+		String tabName = "HolidayLog";
+		String hql = " select sum(d.endTime-d.startTime) from " + tabName + " d where d.holiday.id=:holidayId and d.users.id=:userId " +
+				" and d.startTime between :startTime and :endTime  ";
 		Double seconds = (Double) getHibernateTemplate().findByNamedParam(hql, new String[]{"holidayId","userId","startTime","endTime"}, new Object[]{holidayId,userId,startDate,endDate}).get(0);
 		if(seconds == null || seconds.intValue() == 0) return 0;
 		return new Double(seconds / 60).intValue();
@@ -30,7 +31,8 @@ public class HolidayDaoImpl extends HibernateDaoSupport implements HolidayDao {
 	
 	@SuppressWarnings("unchecked")
 	public List<Holiday> listHoliday() {
-		return getHibernateTemplate().find(" from Holiday ");
+		String tabName = "Holiday";
+		return getHibernateTemplate().find(" from " + tabName);
 	}
 
 	public void deleteHolidayLog(HolidayLog holidayLog) {
@@ -41,9 +43,16 @@ public class HolidayDaoImpl extends HibernateDaoSupport implements HolidayDao {
 	public List<HolidayLog> listHolidayLogByUser(final int userId, final int start, final int limit) {
 		return getHibernateTemplate().executeFind(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = " from HolidayLog ";
-				if(userId != 0) hql = hql + " where users.id=:userId ";
-				hql = hql + " order by startTime desc ";
+				String tabName = "HolidayLog";
+				String hql = " from " + tabName;
+				if(userId != 0){
+					hql = hql + " h where h.users.id=:userId order by h.startTime desc ";
+				}else{
+					hql = hql + " h order by h.startTime desc ";
+				}
+//				if(userId != 0) hql = hql + " h where h.users.id=:userId";
+//				hql = hql + " h order by h.startTime desc ";
+
 				Query query = session.createQuery(hql);
 				if(userId != 0) query.setInteger("userId", userId);
 				return query.setFirstResult(start).setMaxResults(limit).list();
@@ -54,8 +63,9 @@ public class HolidayDaoImpl extends HibernateDaoSupport implements HolidayDao {
 	public Integer getHolidayLogCountByUser(final int userId) {
 		return ((Long)getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session) throws HibernateException, SQLException {
-				String hql = " select count(*) from HolidayLog  ";
-				if(userId != 0) hql = hql + " where users.id=:userId ";
+				String tabName = "HolidayLog";
+				String hql = " select count(*) from " + tabName;
+				if(userId != 0) hql = hql + " h where h.users.id=:userId ";
 				Query query = session.createQuery(hql);
 				if(userId != 0) query.setInteger("userId", userId);
 				return query.list().get(0); 
@@ -72,7 +82,8 @@ public class HolidayDaoImpl extends HibernateDaoSupport implements HolidayDao {
 	}
 	
 	public boolean isHoliday(Date startTime,Date endTime){
-		String hql = " select count(*) from HolidayLog where startTime <=:startTime and endTime >= :endTime ";
+		String tabName = "HolidayLog";
+		String hql = " select count(*) from " + tabName + " h where h.startTime <=:startTime and h.endTime >= :endTime ";
 		return ((Long)(getHibernateTemplate().findByNamedParam(hql, new String[]{"startTime","endTime"}, new Object[]{startTime,endTime}).get(0))).intValue() > 0;
 	}
 }

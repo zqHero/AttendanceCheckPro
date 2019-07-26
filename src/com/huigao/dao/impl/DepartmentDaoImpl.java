@@ -21,7 +21,8 @@ public class DepartmentDaoImpl extends HibernateDaoSupport implements Department
 		getHibernateTemplate().execute(new HibernateCallback(){
 			public Object doInHibernate(Session session)
 					throws HibernateException, SQLException {
-				return session.createQuery(" delete Department where id=:departmentId ")
+				String tabName = "Department";
+				return session.createQuery(" delete " + tabName + " d where d.id=:departmentId ")
 					   .setInteger("departmentId", departmentId).executeUpdate();
 			}
 			
@@ -34,7 +35,8 @@ public class DepartmentDaoImpl extends HibernateDaoSupport implements Department
 
 	@SuppressWarnings("unchecked")
 	public List<Department> list() {
-		return getHibernateTemplate().find(" from Department ");
+		String tabName = "Department";
+		return getHibernateTemplate().find(" from " + tabName);
 	}
 
 	public void save(Department department) {
@@ -44,5 +46,4 @@ public class DepartmentDaoImpl extends HibernateDaoSupport implements Department
 	public void update(Department department) {
 		getHibernateTemplate().update(department);
 	}
-
 }

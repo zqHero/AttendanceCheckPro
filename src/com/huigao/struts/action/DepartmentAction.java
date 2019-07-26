@@ -43,7 +43,7 @@ public class DepartmentAction extends MappingDispatchActionSupport {
 			   .append(department.getDepartmentDesc()).append("']");
 		}
 		String str = "[" + buf.toString() + "]";
-		response.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("utf-8");
 		response.getWriter().print(str);
 		return null;
 	}
@@ -51,12 +51,12 @@ public class DepartmentAction extends MappingDispatchActionSupport {
 	public ActionForward save(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		response.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("utf-8");
 		
 		String departmentName = request.getParameter("departmentName");
 		String departmentDesc = request.getParameter("departmentDesc");
-		System.out.println(departmentName);
-		System.out.println(departmentDesc); 
+//		System.out.println(departmentName);
+//		System.out.println(departmentDesc);
 		try {
 			Department department = new Department();
 			department.setDepartmentName(departmentName);
@@ -74,7 +74,7 @@ public class DepartmentAction extends MappingDispatchActionSupport {
 	public ActionForward delete(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		response.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("utf-8");
 		String departmentIds = request.getParameter("dids");
 		String[] depts = departmentIds.split(",");
 		for (int i = 0; i < depts.length; i++) {
@@ -87,13 +87,11 @@ public class DepartmentAction extends MappingDispatchActionSupport {
 	public ActionForward update(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		response.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("utf-8");
 		
 		Integer departmentId = new Integer(request.getParameter("departmentId"));
 		String departmentName = request.getParameter("departmentName");
 		String departmentDesc = request.getParameter("departmentDesc");
-		System.out.println(departmentName);
-		System.out.println(departmentDesc); 
 		try {
 			Department department = departmentService.getById(departmentId); 
 			department.setDepartmentName(departmentName);

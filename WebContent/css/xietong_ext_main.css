@@ -3,16 +3,16 @@ a:link,a:visited {text-decoration: none;}
 a:hover {text-decoration: underline;}
 #header {background: #7F99BE url(../images/layout-browser-hd-bg.gif) repeat-x center; visibility: hidden;}
 #header h1 {font-size: 16px;font-weight: bold;color: #fff;padding: 5px 10px;}
-.start-bg {background-image: url(../images/bg.jpg);}
+.start-bg {background-image: url(../images/folder_go.png);}
 .icon-login-username {background-color:#FFFFFF;	background:url(../images/user.gif) no-repeat ; padding-left:20px;}
 .icon-login-password {background-color:#FFFFFF; background:url(../images/lock.gif) no-repeat ;	padding-left:20px;}
-.icon-daka {background-image: url(../images/daka.gif) !important;}
+.icon-daka {background-image: url(../images/add.gif) !important;}
 .icon-nav {background-image: url(../images/folder_go.png) !important;}
 .icon-settings {background-image: url(../images/folder_wrench.png) !important;}
 .icon-add {background-image: url(../images/add.gif) !important;}
 .icon-edit {background-image: url(../images/edit.gif) !important;}
 .icon-del {background-image: url(../images/del.gif) !important;}
-.icon-del-gray {background-image: url(../images/del_gray.gif) !important;}
+.icon-del-gray {background-image: url(../images/add.gif) !important;}
 .icon-reset {background-image: url(../images/book_previous.png) !important;}
 .icon-search {background-image: url(../images/search.gif) !important;}
 .icon-refresh {background-image: url(../images/refresh.gif) !important;}

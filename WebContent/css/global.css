@@ -14,7 +14,7 @@
 }
 
 .buttonright_blue_white {
-	BACKGROUND: url(../images/blue_cap_right.gif) no-repeat right top;
+	BACKGROUND: url(../images/ffffff_e0dfdf_botr.gif) no-repeat right top;
 	FLOAT: right;
 	MARGIN: 10px 5px 5px 0px;
 	CURSOR: pointer;
@@ -25,7 +25,7 @@
 .buttoncap_blue_white {
 	PADDING-RIGHT: 0px;
 	PADDING-LEFT: 15px;
-	BACKGROUND: url(../images/blue_cap_left.gif) no-repeat left top;
+	BACKGROUND: url(../images/ffffff_e0dfdf_botr.gif) no-repeat left top;
 	FLOAT: left;
 	PADDING-BOTTOM: 0px;
 	MARGIN: 0px;

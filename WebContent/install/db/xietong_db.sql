@@ -317,7 +317,7 @@ INSERT INTO `t_role_resource` (`role_id`, `resource_id`) VALUES
 #
 # Data for the `t_user` table  (LIMIT 0,500)   database must have a user default a user  admin
 INSERT INTO `t_user` (`id`, `birthday`, `gender`, `password`, `realName`, `school`, `specialty`, `userName`, `department_id`, `superiors_id`, `disabled`) VALUES
-(1,'2019-08-08','男','21232f297a57a5a743894a0e4a801fc3','admin','黑塔工作室','产品研发专业','admin',null,null,False);
+(1,'2019-08-08','男','21232f297a57a5a743894a0e4a801fc3','admin','黑塔工作室','产品研发专业','admin',3,null,False);
 #COMMIT;
 
 #
